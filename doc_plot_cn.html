@@ -1,0 +1,437 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>plot-cn &mdash; HATCHet 0.3.1 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> HATCHet
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.3.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="README.html">HATCHet</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">Modules</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">HATCHet</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>plot-cn</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/doc_plot_cn.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="plot-cn">
+<h1>plot-cn<a class="headerlink" href="#plot-cn" title="Permalink to this headline">¶</a></h1>
+<p>This step analyzes the inferred copy-number states and clone proportions and produces informative plots jointly considering all samples from the same patient. In addition, this step can also combine results obtained for different patients and perform integrative analysis.
+plot-cn produces several informative plots concerning the copy-number states and proportions for the inferred clones from multiple tumor samples of a patient.
+In additionl, plot-cn can also produce some informative plots to compare the solutions obtained on different patients.</p>
+<div class="section" id="input">
+<h2>Input<a class="headerlink" href="#input" title="Permalink to this headline">¶</a></h2>
+<p>plot-cn considers in input one or more tab-separated files. Each of these files contains the inferred copy-number states and clone proportions for clustered genomic bins and has the following format:</p>
+<table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Field</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">CHR</span></code></p></td>
+<td><p>Name of a chromosome</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">START</span></code></p></td>
+<td><p>Starting genomic position of a genomic bin in <code class="docutils literal notranslate"><span class="pre">CHR</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">END</span></code></p></td>
+<td><p>Ending genomic position of a genomic bin in <code class="docutils literal notranslate"><span class="pre">CHR</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">SAMPLE</span></code></p></td>
+<td><p>Name of a tumor sample</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">RD</span></code></p></td>
+<td><p>RDR of the bin in <code class="docutils literal notranslate"><span class="pre">SAMPLE</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">#SNPS</span></code></p></td>
+<td><p>Number of SNPs present in the bin in <code class="docutils literal notranslate"><span class="pre">SAMPLE</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">COV</span></code></p></td>
+<td><p>Average coverage in the bin in <code class="docutils literal notranslate"><span class="pre">SAMPLE</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">ALPHA</span></code></p></td>
+<td><p>Alpha parameter related to the binomial model of BAF for the bin in <code class="docutils literal notranslate"><span class="pre">SAMPLE</span></code>, typically total number of reads from A allele</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">BETA</span></code></p></td>
+<td><p>Beta parameter related to the binomial model of BAF for the bin in <code class="docutils literal notranslate"><span class="pre">SAMPLE</span></code>, typically total number of reads from B allele</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">BAF</span></code></p></td>
+<td><p>BAF of the bin in <code class="docutils literal notranslate"><span class="pre">SAMPLE</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">CLUSTER</span></code></p></td>
+<td><p>The name of the corresponding cluster of the bin in <code class="docutils literal notranslate"><span class="pre">SAMPLE</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">cn_normal</span></code></p></td>
+<td><p>The copy number state of the normal diploid clone equal to <code>1|1</code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">u_normal</span></code></p></td>
+<td><p>The normal admixture of the normal diploid cells in the corresponding sample</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">cn_clone${n}</span></code></p></td>
+<td><p>The copy number state of the <code class="docutils literal notranslate"><span class="pre">${n}</span></code> tumor clone in the format <code>A|B</code> where <code class="docutils literal notranslate"><span class="pre">A</span></code> and <code class="docutils literal notranslate"><span class="pre">B</span></code> are the two allele-specific copy numbers of the corresponding genomic bin</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">u_clone${n}</span></code></p></td>
+<td><p>The clone proportion of the <code class="docutils literal notranslate"><span class="pre">${n}</span></code> tumor clone in the corresponding sample</p></td>
+</tr>
+</tbody>
+</table>
+<p>When a single file is speicified, the input is given directly and plot-cn runs in single-patient mode.
+When multiple files are speicified, the files are given in a white-space separated list of filenames between “…” and plot-cn runs in multi-patient mode.</p>
+</div>
+<div class="section" id="parameters">
+<h2>Parameters<a class="headerlink" href="#parameters" title="Permalink to this headline">¶</a></h2>
+<table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Usage</p></th>
+<th class="head"><p>Default</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">-x</span></code>, <code class="docutils literal notranslate"><span class="pre">--rundir</span></code></p></td>
+<td><p>Outpud directory</p></td>
+<td><p>Directory where the output files are generated</p></td>
+<td><p>Current directory</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">-n</span></code>, <code class="docutils literal notranslate"><span class="pre">--patientnames</span></code></p></td>
+<td><p>Names of the patients</p></td>
+<td><p>White-space separated list of patient names is used when running in multi-patient mode</p></td>
+<td><p>Inferred from file names</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">-u</span></code>, <code class="docutils literal notranslate"><span class="pre">--minu</span></code></p></td>
+<td><p>Minimum CNA proportion</p></td>
+<td><p>A minimum CNA proportion that is used as a minimum threshold to exclude CNA present in lower proportions from the plot</p></td>
+<td><p>0.2</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">-e</span></code>, <code class="docutils literal notranslate"><span class="pre">--threshold</span></code></p></td>
+<td><p>Tumor ploidy threshold for WGD/no WGD</p></td>
+<td><p>This is the value of tumor ploidy which is used to determine either the absence or presence of a WGD which determine the basic copy number equal to either 2 or 4</p></td>
+<td><p>3.0</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">-b</span></code>, <code class="docutils literal notranslate"><span class="pre">--baseCN</span></code></p></td>
+<td><p>Base copy number</p></td>
+<td><p>Force base copy number to be equal to this value for determining the grey colors on plots</p></td>
+<td><p>None, inferred tumor ploidy</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">-sC</span></code>, <code class="docutils literal notranslate"><span class="pre">--figsizeclones</span></code></p></td>
+<td><p>Size of tumor-clone plots</p></td>
+<td><p>The size should be given in the format <code class="docutils literal notranslate"><span class="pre">(X-SIZE,</span> <span class="pre">Y-SIZE)</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">(12,</span> <span class="pre">3)</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">-sP</span></code>, <code class="docutils literal notranslate"><span class="pre">--figsizecn</span></code></p></td>
+<td><p>Size of copy-number plots</p></td>
+<td><p>The size should be given in the format <code class="docutils literal notranslate"><span class="pre">(X-SIZE,</span> <span class="pre">Y-SIZE)</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">(16,</span> <span class="pre">4)</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">-sG</span></code>, <code class="docutils literal notranslate"><span class="pre">--figsizegrid</span></code></p></td>
+<td><p>Size of grid plots</p></td>
+<td><p>The size should be given in the format <code class="docutils literal notranslate"><span class="pre">(X-SIZE,</span> <span class="pre">Y-SIZE)</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">(20,</span> <span class="pre">10)</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">-rC</span></code>, <code class="docutils literal notranslate"><span class="pre">--resolutionclones</span></code></p></td>
+<td><p>Resolution for tumor-clone plots</p></td>
+<td><p>Number of bins that are merged together when plotting tumor-clone profiles</p></td>
+<td><p>100</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">-rP</span></code>, <code class="docutils literal notranslate"><span class="pre">--resolutioncn</span></code></p></td>
+<td><p>Resolution for copy-number plots</p></td>
+<td><p>Number of bins that are merged together when plotting copy-number profiles</p></td>
+<td><p>500</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">-rG</span></code>, <code class="docutils literal notranslate"><span class="pre">--resolutiongrid</span></code></p></td>
+<td><p>Resolution for grid plots</p></td>
+<td><p>Number of bins that are merged together for grid plots</p></td>
+<td><p>100</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">--ymax</span></code></p></td>
+<td><p>Maximum value in y-axis</p></td>
+<td><p>Fix the maximum y-axis value</p></td>
+<td><p>Automatically inferred</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">--ymin</span></code></p></td>
+<td><p>Minimum value in y-axis</p></td>
+<td><p>Fix the minimum y-axis value</p></td>
+<td><p>Automatically inferred</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">--clonepalette</span></code></p></td>
+<td><p>Name of color palette</p></td>
+<td><p>Color palette to use for coloring tumor clones among the ones available, including <code class="docutils literal notranslate"><span class="pre">Set1,</span> <span class="pre">Set2,</span> <span class="pre">Set3,</span> <span class="pre">Paired</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Set1</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">--linkage</span></code></p></td>
+<td><p>Linkage method</p></td>
+<td><p>The linkage method to use for the clustering of the rows in grdin and tumor-clone plots, including {single, complete, average, weighted, centroid, median, ward} from SciPy</p></td>
+<td><p>single</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="single-patient-intra-tumor">
+<h2>Single-patient (intra-tumor)<a class="headerlink" href="#single-patient-intra-tumor" title="Permalink to this headline">¶</a></h2>
+<p>In the following, we report an example of all the plots produced in single-patient mode obtained by running the following command:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>python plot_cn.py A12.bbc.ucn -sG &quot;(16,4)&quot;
+</pre></div>
+</div>
+<hr class="docutils" />
+<div class="section" id="total-copy-numbers-of-tumor-clones">
+<h3>Total copy numbers of tumor clones<a class="headerlink" href="#total-copy-numbers-of-tumor-clones" title="Permalink to this headline">¶</a></h3>
+<p>The total copy number for every genomic region, sorted across chromosomes, with a color identifiying each tumor clone.
+When the total copy numbers of different clones overlap the same value, the corresponding bars are slightly shifted.</p>
+<p><img alt="" src="_images/intratumor-clones-totalcn.png" /></p>
+</div>
+<hr class="docutils" />
+<div class="section" id="allele-specific-copy-numbers-of-tumor-clones">
+<h3>Allele-specific copy numbers of tumor clones<a class="headerlink" href="#allele-specific-copy-numbers-of-tumor-clones" title="Permalink to this headline">¶</a></h3>
+<p>The allele-specific copy number for every genomic region, sorted across chromosomes, with a color identifiying each tumor clone.
+The A-allele is represented in the top part and the B-allele in the bottom part (the negative sign should be ignored).
+When the allele-specific copy numbers of different clones overlap the same value, the corresponding bars are slightly shifted.</p>
+<p><img alt="" src="_images/intratumor-clones-allelecn.png" /></p>
+</div>
+<hr class="docutils" />
+<div class="section" id="proportions-of-total-copy-numbers-per-sample">
+<h3>Proportions of total copy numbers per sample<a class="headerlink" href="#proportions-of-total-copy-numbers-per-sample" title="Permalink to this headline">¶</a></h3>
+<p>For each sample, the proportions across the different total copy numbers are represented for every genomic region.</p>
+<p><img alt="" src="_images/intratumor-copynumber-totalcn-0.png" />
+<img alt="" src="_images/intratumor-copynumber-totalcn-1.png" />
+<img alt="" src="_images/intratumor-copynumber-totalcn-2.png" /></p>
+</div>
+<hr class="docutils" />
+<div class="section" id="proportions-of-allele-specific-copy-numbers-per-sample">
+<h3>Proportions of allele-specific copy numbers per sample<a class="headerlink" href="#proportions-of-allele-specific-copy-numbers-per-sample" title="Permalink to this headline">¶</a></h3>
+<p>For each sample, the proportions across the different allele-specific copy numbers are represented for every genomic region.
+The proportions of A-specific copy numbers are represented in the top part of the plot with positive values, while the proportions of B-specific copy numbers are represented in the bottom part of the plot with negative values.</p>
+<p><img alt="" src="_images/intratumor-copynumber-allelecn-0.png" />
+<img alt="" src="_images/intratumor-copynumber-allelecn-1.png" />
+<img alt="" src="_images/intratumor-copynumber-allelecn-2.png" /></p>
+</div>
+<hr class="docutils" />
+<div class="section" id="copy-number-profiles-of-tumor-clones">
+<h3>Copy-number profiles of tumor clones<a class="headerlink" href="#copy-number-profiles-of-tumor-clones" title="Permalink to this headline">¶</a></h3>
+<p>Every row of the main grid corresponds to a tumor clone and the total copy number for each genomic region is represented, such that the regions are sorted across the crhomosomes represented on the top as alternating gray boxes.
+A heatmap in the left side of the figure represents the clone proprtions across every sample (columns).
+Also, on the left-most side of the figure a dendogram represents a clustering of the tumor clones.</p>
+<p><img alt="" src="_images/intratumor-profiles.png" /></p>
+</div>
+<hr class="docutils" />
+<div class="section" id="reduced-copy-number-profiles-of-tumor-clones">
+<h3>Reduced copy-number profiles of tumor clones<a class="headerlink" href="#reduced-copy-number-profiles-of-tumor-clones" title="Permalink to this headline">¶</a></h3>
+<p>Every row of the main grid corresponds to a tumor clone and the corredponsing reduced total copy number for each genomic region is represented, such that the regions are sorted across the crhomosomes represented on the top as alternating gray boxes.
+More specifically, a region is classified as:</p>
+<ul class="simple">
+<li><p>0 when the total copy number is equal to the base</p></li>
+<li><p>-1 when it corresponds to a deletion (total copy number lower than base)</p></li>
+<li><p>1 when it corresponds to an amplification (total copy number higher than base).</p></li>
+</ul>
+<p>A heatmap in the left side of the figure represents the clone proprtions across every sample (columns).
+Also, on the left-most side of the figure a dendogram represents a clustering of the tumor clones.</p>
+<p><img alt="" src="_images/intratumor-profilesreduced.png" /></p>
+</div>
+<hr class="docutils" />
+<div class="section" id="mixture-profiles-of-tumor-samples">
+<h3>Mixture profiles of tumor samples<a class="headerlink" href="#mixture-profiles-of-tumor-samples" title="Permalink to this headline">¶</a></h3>
+<p>Every row of the main grid corresponds to a tumor sample and the corredponsing reduced-fractional copy number for each genomic region is represented, such that the regions are sorted across the crhomosomes represented on the top as alternating gray boxes.
+More specifically, the fractional copy number are computed from the mixed profiles.
+A heatmap in the left side of the figure represents the clone proprtions across every sample (columns).
+Also, on the left-most side of the figure a dendogram represents a clustering of the tumor samples.</p>
+<p><img alt="" src="_images/intratumor-mixtures.png" /></p>
+</div>
+<hr class="docutils" />
+<div class="section" id="subclonality">
+<h3>Subclonality<a class="headerlink" href="#subclonality" title="Permalink to this headline">¶</a></h3>
+<p>This plot is not currently functioning properly.</p>
+<hr class="docutils" />
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Princeton University.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

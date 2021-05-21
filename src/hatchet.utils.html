@@ -1,0 +1,1352 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>hatchet.utils package &mdash; HATCHet 0.3.1 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="hatchet.bin package" href="hatchet.bin.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> HATCHet
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.3.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../README.html">HATCHet</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../modules.html">Modules</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">HATCHet</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../modules.html">Modules</a> &raquo;</li>
+        
+          <li><a href="hatchet.html">hatchet package</a> &raquo;</li>
+        
+      <li>hatchet.utils package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/src/hatchet.utils.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="hatchet-utils-package">
+<h1>hatchet.utils package<a class="headerlink" href="#hatchet-utils-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-hatchet.utils.ArgParsing">
+<span id="hatchet-utils-argparsing-module"></span><h2>hatchet.utils.ArgParsing module<a class="headerlink" href="#module-hatchet.utils.ArgParsing" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt id="hatchet.utils.ArgParsing.extractChromosomes">
+<code class="sig-prename descclassname"><span class="pre">hatchet.utils.ArgParsing.</span></code><code class="sig-name descname"><span class="pre">extractChromosomes</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">samtools</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normal</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tumors</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reference</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.ArgParsing.extractChromosomes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="hatchet.utils.ArgParsing.getSQNames">
+<code class="sig-prename descclassname"><span class="pre">hatchet.utils.ArgParsing.</span></code><code class="sig-name descname"><span class="pre">getSQNames</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">samtools</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bamfile</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.ArgParsing.getSQNames" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="hatchet.utils.ArgParsing.parseRegions">
+<code class="sig-prename descclassname"><span class="pre">hatchet.utils.ArgParsing.</span></code><code class="sig-name descname"><span class="pre">parseRegions</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">region_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chromosomes</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.ArgParsing.parseRegions" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="hatchet.utils.ArgParsing.parse_cluster_bins_args">
+<code class="sig-prename descclassname"><span class="pre">hatchet.utils.ArgParsing.</span></code><code class="sig-name descname"><span class="pre">parse_cluster_bins_args</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.ArgParsing.parse_cluster_bins_args" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parse command line arguments
+Returns:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="hatchet.utils.ArgParsing.parse_combine_counts_args">
+<code class="sig-prename descclassname"><span class="pre">hatchet.utils.ArgParsing.</span></code><code class="sig-name descname"><span class="pre">parse_combine_counts_args</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.ArgParsing.parse_combine_counts_args" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parse command line arguments
+Returns:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="hatchet.utils.ArgParsing.parse_count_alleles_arguments">
+<code class="sig-prename descclassname"><span class="pre">hatchet.utils.ArgParsing.</span></code><code class="sig-name descname"><span class="pre">parse_count_alleles_arguments</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.ArgParsing.parse_count_alleles_arguments" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parse command line arguments
+Returns:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="hatchet.utils.ArgParsing.parse_count_reads_arguments">
+<code class="sig-prename descclassname"><span class="pre">hatchet.utils.ArgParsing.</span></code><code class="sig-name descname"><span class="pre">parse_count_reads_arguments</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.ArgParsing.parse_count_reads_arguments" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parse command line arguments
+Returns:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="hatchet.utils.ArgParsing.parse_genotype_snps_arguments">
+<code class="sig-prename descclassname"><span class="pre">hatchet.utils.ArgParsing.</span></code><code class="sig-name descname"><span class="pre">parse_genotype_snps_arguments</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.ArgParsing.parse_genotype_snps_arguments" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parse command line arguments
+Returns:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="hatchet.utils.ArgParsing.parse_plot_bins_args">
+<code class="sig-prename descclassname"><span class="pre">hatchet.utils.ArgParsing.</span></code><code class="sig-name descname"><span class="pre">parse_plot_bins_args</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.ArgParsing.parse_plot_bins_args" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parse command line arguments
+Returns:</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-hatchet.utils.BAMBinning">
+<span id="hatchet-utils-bambinning-module"></span><h2>hatchet.utils.BAMBinning module<a class="headerlink" href="#module-hatchet.utils.BAMBinning" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="hatchet.utils.BAMBinning.Binner">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">hatchet.utils.BAMBinning.</span></code><code class="sig-name descname"><span class="pre">Binner</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task_queue</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">result_queue</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">progress_bar</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">samtools</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">q</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">regions</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.BAMBinning.Binner" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">multiprocessing.context.Process</span></code></p>
+<dl class="field-list simple">
+<dt class="field-odd">Attributes</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>authkey</strong></dt><dd></dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">daemon</span></code></dt><dd><p>Return whether process is a daemon</p>
+</dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">exitcode</span></code></dt><dd><p>Return exit code of process or <cite>None</cite> if it has yet to stop</p>
+</dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">ident</span></code></dt><dd><p>Return identifier (PID) of process or <cite>None</cite> if it has yet to start</p>
+</dd>
+<dt><strong>name</strong></dt><dd></dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">pid</span></code></dt><dd><p>Return identifier (PID) of process or <cite>None</cite> if it has yet to start</p>
+</dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">sentinel</span></code></dt><dd><p>Return a file descriptor (Unix) or handle (Windows) suitable for waiting for process termination.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Methods</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">close</span></code>()</p></td>
+<td><p>Close the Process object.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_alive</span></code>()</p></td>
+<td><p>Return whether process is alive</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">join</span></code>([timeout])</p></td>
+<td><p>Wait until child process terminates</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">kill</span></code>()</p></td>
+<td><p>Terminate process; sends SIGKILL signal or uses TerminateProcess()</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hatchet.utils.BAMBinning.Binner.run" title="hatchet.utils.BAMBinning.Binner.run"><code class="xref py py-obj docutils literal notranslate"><span class="pre">run</span></code></a>()</p></td>
+<td><p>Method to be run in sub-process; can be overridden in sub-class</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">start</span></code>()</p></td>
+<td><p>Start child process</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">terminate</span></code>()</p></td>
+<td><p>Terminate process; sends SIGTERM signal or uses TerminateProcess()</p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>binChr</strong></p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt id="hatchet.utils.BAMBinning.Binner.binChr">
+<code class="sig-name descname"><span class="pre">binChr</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bamfile</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">samplename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chromosome</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.BAMBinning.Binner.binChr" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="hatchet.utils.BAMBinning.Binner.run">
+<code class="sig-name descname"><span class="pre">run</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.BAMBinning.Binner.run" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to be run in sub-process; can be overridden in sub-class</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt id="hatchet.utils.BAMBinning.bin">
+<code class="sig-prename descclassname"><span class="pre">hatchet.utils.BAMBinning.</span></code><code class="sig-name descname"><span class="pre">bin</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">samtools</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">samples</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chromosomes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_workers</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">q</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">regions</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.BAMBinning.bin" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-hatchet.utils.CoordinateFinding">
+<span id="hatchet-utils-coordinatefinding-module"></span><h2>hatchet.utils.CoordinateFinding module<a class="headerlink" href="#module-hatchet.utils.CoordinateFinding" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt id="hatchet.utils.CoordinateFinding.binChr">
+<code class="sig-prename descclassname"><span class="pre">hatchet.utils.CoordinateFinding.</span></code><code class="sig-name descname"><span class="pre">binChr</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bamfile</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sample</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seq</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">least</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.CoordinateFinding.binChr" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="hatchet.utils.CoordinateFinding.extractChr">
+<code class="sig-prename descclassname"><span class="pre">hatchet.utils.CoordinateFinding.</span></code><code class="sig-name descname"><span class="pre">extractChr</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ref</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.CoordinateFinding.extractChr" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="hatchet.utils.CoordinateFinding.findEnd">
+<code class="sig-prename descclassname"><span class="pre">hatchet.utils.CoordinateFinding.</span></code><code class="sig-name descname"><span class="pre">findEnd</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bamfile</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seq</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">least</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.CoordinateFinding.findEnd" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="hatchet.utils.CoordinateFinding.findStart">
+<code class="sig-prename descclassname"><span class="pre">hatchet.utils.CoordinateFinding.</span></code><code class="sig-name descname"><span class="pre">findStart</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bamfile</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seq</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">least</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.CoordinateFinding.findStart" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-hatchet.utils.ProgressBar">
+<span id="hatchet-utils-progressbar-module"></span><h2>hatchet.utils.ProgressBar module<a class="headerlink" href="#module-hatchet.utils.ProgressBar" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="hatchet.utils.ProgressBar.ProgressBar">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">hatchet.utils.ProgressBar.</span></code><code class="sig-name descname"><span class="pre">ProgressBar</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">total</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">length</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">counter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">decimals</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fill</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'█'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lock</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prefix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Progress:'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">suffix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Complete'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.ProgressBar.ProgressBar" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p class="rubric">Methods</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 64%" />
+<col style="width: 36%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>progress</strong></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><strong>progressLock</strong></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><strong>progressNoLock</strong></p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt id="hatchet.utils.ProgressBar.ProgressBar.progress">
+<code class="sig-name descname"><span class="pre">progress</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">advance</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">msg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.ProgressBar.ProgressBar.progress" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="hatchet.utils.ProgressBar.ProgressBar.progressLock">
+<code class="sig-name descname"><span class="pre">progressLock</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">advance</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">msg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.ProgressBar.ProgressBar.progressLock" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="hatchet.utils.ProgressBar.ProgressBar.progressNoLock">
+<code class="sig-name descname"><span class="pre">progressNoLock</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">advance</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">msg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.ProgressBar.ProgressBar.progressNoLock" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-hatchet.utils.Supporting">
+<span id="hatchet-utils-supporting-module"></span><h2>hatchet.utils.Supporting module<a class="headerlink" href="#module-hatchet.utils.Supporting" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt id="hatchet.utils.Supporting.argmax">
+<code class="sig-prename descclassname"><span class="pre">hatchet.utils.Supporting.</span></code><code class="sig-name descname"><span class="pre">argmax</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">d</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.Supporting.argmax" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="hatchet.utils.Supporting.argmin">
+<code class="sig-prename descclassname"><span class="pre">hatchet.utils.Supporting.</span></code><code class="sig-name descname"><span class="pre">argmin</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">d</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.Supporting.argmin" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt id="hatchet.utils.Supporting.bcolors">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">hatchet.utils.Supporting.</span></code><code class="sig-name descname"><span class="pre">bcolors</span></code><a class="headerlink" href="#hatchet.utils.Supporting.bcolors" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt id="hatchet.utils.Supporting.bcolors.BBLUE">
+<code class="sig-name descname"><span class="pre">BBLUE</span></code><em class="property"> <span class="pre">=</span> <span class="pre">'\x1b[96m'</span></em><a class="headerlink" href="#hatchet.utils.Supporting.bcolors.BBLUE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="hatchet.utils.Supporting.bcolors.BOLD">
+<code class="sig-name descname"><span class="pre">BOLD</span></code><em class="property"> <span class="pre">=</span> <span class="pre">'\x1b[1m'</span></em><a class="headerlink" href="#hatchet.utils.Supporting.bcolors.BOLD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="hatchet.utils.Supporting.bcolors.ENDC">
+<code class="sig-name descname"><span class="pre">ENDC</span></code><em class="property"> <span class="pre">=</span> <span class="pre">'\x1b[0m'</span></em><a class="headerlink" href="#hatchet.utils.Supporting.bcolors.ENDC" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="hatchet.utils.Supporting.bcolors.FAIL">
+<code class="sig-name descname"><span class="pre">FAIL</span></code><em class="property"> <span class="pre">=</span> <span class="pre">'\x1b[91m'</span></em><a class="headerlink" href="#hatchet.utils.Supporting.bcolors.FAIL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="hatchet.utils.Supporting.bcolors.HEADER">
+<code class="sig-name descname"><span class="pre">HEADER</span></code><em class="property"> <span class="pre">=</span> <span class="pre">'\x1b[95m'</span></em><a class="headerlink" href="#hatchet.utils.Supporting.bcolors.HEADER" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="hatchet.utils.Supporting.bcolors.OKBLUE">
+<code class="sig-name descname"><span class="pre">OKBLUE</span></code><em class="property"> <span class="pre">=</span> <span class="pre">'\x1b[94m'</span></em><a class="headerlink" href="#hatchet.utils.Supporting.bcolors.OKBLUE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="hatchet.utils.Supporting.bcolors.OKGREEN">
+<code class="sig-name descname"><span class="pre">OKGREEN</span></code><em class="property"> <span class="pre">=</span> <span class="pre">'\x1b[92m'</span></em><a class="headerlink" href="#hatchet.utils.Supporting.bcolors.OKGREEN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="hatchet.utils.Supporting.bcolors.UNDERLINE">
+<code class="sig-name descname"><span class="pre">UNDERLINE</span></code><em class="property"> <span class="pre">=</span> <span class="pre">'\x1b[4m'</span></em><a class="headerlink" href="#hatchet.utils.Supporting.bcolors.UNDERLINE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="hatchet.utils.Supporting.bcolors.WARNING">
+<code class="sig-name descname"><span class="pre">WARNING</span></code><em class="property"> <span class="pre">=</span> <span class="pre">'\x1b[93m'</span></em><a class="headerlink" href="#hatchet.utils.Supporting.bcolors.WARNING" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt id="hatchet.utils.Supporting.close">
+<code class="sig-prename descclassname"><span class="pre">hatchet.utils.Supporting.</span></code><code class="sig-name descname"><span class="pre">close</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.Supporting.close" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="hatchet.utils.Supporting.digits">
+<code class="sig-prename descclassname"><span class="pre">hatchet.utils.Supporting.</span></code><code class="sig-name descname"><span class="pre">digits</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">string</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.Supporting.digits" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="hatchet.utils.Supporting.error">
+<code class="sig-prename descclassname"><span class="pre">hatchet.utils.Supporting.</span></code><code class="sig-name descname"><span class="pre">error</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.Supporting.error" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="hatchet.utils.Supporting.log">
+<code class="sig-prename descclassname"><span class="pre">hatchet.utils.Supporting.</span></code><code class="sig-name descname"><span class="pre">log</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">level</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lock</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.Supporting.log" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="hatchet.utils.Supporting.logArgs">
+<code class="sig-prename descclassname"><span class="pre">hatchet.utils.Supporting.</span></code><code class="sig-name descname"><span class="pre">logArgs</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">width</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.Supporting.logArgs" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="hatchet.utils.Supporting.naturalOrder">
+<code class="sig-prename descclassname"><span class="pre">hatchet.utils.Supporting.</span></code><code class="sig-name descname"><span class="pre">naturalOrder</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.Supporting.naturalOrder" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="hatchet.utils.Supporting.numericOrder">
+<code class="sig-prename descclassname"><span class="pre">hatchet.utils.Supporting.</span></code><code class="sig-name descname"><span class="pre">numericOrder</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.Supporting.numericOrder" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="hatchet.utils.Supporting.urlexists">
+<code class="sig-prename descclassname"><span class="pre">hatchet.utils.Supporting.</span></code><code class="sig-name descname"><span class="pre">urlexists</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.Supporting.urlexists" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="hatchet.utils.Supporting.which">
+<code class="sig-prename descclassname"><span class="pre">hatchet.utils.Supporting.</span></code><code class="sig-name descname"><span class="pre">which</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">program</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.Supporting.which" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-hatchet.utils.TotalCounting">
+<span id="hatchet-utils-totalcounting-module"></span><h2>hatchet.utils.TotalCounting module<a class="headerlink" href="#module-hatchet.utils.TotalCounting" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="hatchet.utils.TotalCounting.TotalCounter">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">hatchet.utils.TotalCounting.</span></code><code class="sig-name descname"><span class="pre">TotalCounter</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task_queue</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">result_queue</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">progress_bar</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">samtools</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">q</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.TotalCounting.TotalCounter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">multiprocessing.context.Process</span></code></p>
+<dl class="field-list simple">
+<dt class="field-odd">Attributes</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>authkey</strong></dt><dd></dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">daemon</span></code></dt><dd><p>Return whether process is a daemon</p>
+</dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">exitcode</span></code></dt><dd><p>Return exit code of process or <cite>None</cite> if it has yet to stop</p>
+</dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">ident</span></code></dt><dd><p>Return identifier (PID) of process or <cite>None</cite> if it has yet to start</p>
+</dd>
+<dt><strong>name</strong></dt><dd></dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">pid</span></code></dt><dd><p>Return identifier (PID) of process or <cite>None</cite> if it has yet to start</p>
+</dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">sentinel</span></code></dt><dd><p>Return a file descriptor (Unix) or handle (Windows) suitable for waiting for process termination.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Methods</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">close</span></code>()</p></td>
+<td><p>Close the Process object.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_alive</span></code>()</p></td>
+<td><p>Return whether process is alive</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">join</span></code>([timeout])</p></td>
+<td><p>Wait until child process terminates</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">kill</span></code>()</p></td>
+<td><p>Terminate process; sends SIGKILL signal or uses TerminateProcess()</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hatchet.utils.TotalCounting.TotalCounter.run" title="hatchet.utils.TotalCounting.TotalCounter.run"><code class="xref py py-obj docutils literal notranslate"><span class="pre">run</span></code></a>()</p></td>
+<td><p>Method to be run in sub-process; can be overridden in sub-class</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">start</span></code>()</p></td>
+<td><p>Start child process</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">terminate</span></code>()</p></td>
+<td><p>Terminate process; sends SIGTERM signal or uses TerminateProcess()</p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>binChr</strong></p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt id="hatchet.utils.TotalCounting.TotalCounter.binChr">
+<code class="sig-name descname"><span class="pre">binChr</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bamfile</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">samplename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chromosome</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.TotalCounting.TotalCounter.binChr" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="hatchet.utils.TotalCounting.TotalCounter.run">
+<code class="sig-name descname"><span class="pre">run</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.TotalCounting.TotalCounter.run" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to be run in sub-process; can be overridden in sub-class</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt id="hatchet.utils.TotalCounting.tcount">
+<code class="sig-prename descclassname"><span class="pre">hatchet.utils.TotalCounting.</span></code><code class="sig-name descname"><span class="pre">tcount</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">samtools</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">samples</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chromosomes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_workers</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">q</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.TotalCounting.tcount" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-hatchet.utils.cluster_bins">
+<span id="hatchet-utils-cluster-bins-module"></span><h2>hatchet.utils.cluster_bins module<a class="headerlink" href="#module-hatchet.utils.cluster_bins" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt id="hatchet.utils.cluster_bins.cluster">
+<code class="sig-prename descclassname"><span class="pre">hatchet.utils.cluster_bins.</span></code><code class="sig-name descname"><span class="pre">cluster</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">points</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clouds</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">concentration_prior</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">K</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">restarts</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.cluster_bins.cluster" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clusters a set of data points lying in an arbitrary number of clusters.
+Arguments:</p>
+<blockquote>
+<div><p>data (list of lists of floats): list of data points to be clustered.
+clouds (list or lists of floats, same second dimension as data): bootstrapped bins for clustering
+sampleName (string): The name of the input sample.
+concentration_prior (float): Tuning parameter for clustering, must be between 0 and 1. Used to determine concentration</p>
+<blockquote>
+<div><p>of points in clusters – higher favors more clusters, lower favors fewer clusters.</p>
+</div></blockquote>
+<p>K (int): maximum number of clusters to infer
+restarts (int): number of initializations to try for GMM
+seed (int): random number generator seed for GMM</p>
+</div></blockquote>
+<dl>
+<dt>Returns:</dt><dd><p>mus (list of lists of floats): List of cluster means.
+sigmas (list of 2D lists of floats): List of cluster covariances.
+clusterAssignments (list of ints): The assignment of each interval to a cluster, where an entry</p>
+<blockquote>
+<div><p>j at index i means the ith interval has been assigned to the
+jth meta-interval.</p>
+</div></blockquote>
+<p>numPoints (list of ints): Number of points assigned to each cluster
+numClusters (int): The number of clusters.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="hatchet.utils.cluster_bins.generateClouds">
+<code class="sig-prename descclassname"><span class="pre">hatchet.utils.cluster_bins.</span></code><code class="sig-name descname"><span class="pre">generateClouds</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">points</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">density</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seed</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sdeven</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.02</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sdodd</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.02</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.cluster_bins.generateClouds" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="hatchet.utils.cluster_bins.getPoints">
+<code class="sig-prename descclassname"><span class="pre">hatchet.utils.cluster_bins.</span></code><code class="sig-name descname"><span class="pre">getPoints</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">samples</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.cluster_bins.getPoints" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="hatchet.utils.cluster_bins.main">
+<code class="sig-prename descclassname"><span class="pre">hatchet.utils.cluster_bins.</span></code><code class="sig-name descname"><span class="pre">main</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.cluster_bins.main" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="hatchet.utils.cluster_bins.minSegmentBins">
+<code class="sig-prename descclassname"><span class="pre">hatchet.utils.cluster_bins.</span></code><code class="sig-name descname"><span class="pre">minSegmentBins</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sbb</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nbins</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rd</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nsnps</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cov</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clusters</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">samples</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.cluster_bins.minSegmentBins" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="hatchet.utils.cluster_bins.readBB">
+<code class="sig-prename descclassname"><span class="pre">hatchet.utils.cluster_bins.</span></code><code class="sig-name descname"><span class="pre">readBB</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bbfile</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.cluster_bins.readBB" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="hatchet.utils.cluster_bins.refineClustering">
+<code class="sig-prename descclassname"><span class="pre">hatchet.utils.cluster_bins.</span></code><code class="sig-name descname"><span class="pre">refineClustering</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">combo</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">assign</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">assignidx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">samples</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rdtol</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">baftol</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.cluster_bins.refineClustering" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="hatchet.utils.cluster_bins.roundAlphasBetas">
+<code class="sig-prename descclassname"><span class="pre">hatchet.utils.cluster_bins.</span></code><code class="sig-name descname"><span class="pre">roundAlphasBetas</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">baf</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">beta</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.cluster_bins.roundAlphasBetas" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="hatchet.utils.cluster_bins.scaleBAF">
+<code class="sig-prename descclassname"><span class="pre">hatchet.utils.cluster_bins.</span></code><code class="sig-name descname"><span class="pre">scaleBAF</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">segments</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">samples</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">diploidbaf</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.cluster_bins.scaleBAF" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="hatchet.utils.cluster_bins.segmentBins">
+<code class="sig-prename descclassname"><span class="pre">hatchet.utils.cluster_bins.</span></code><code class="sig-name descname"><span class="pre">segmentBins</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bb</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clusters</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">samples</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.cluster_bins.segmentBins" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="hatchet.utils.cluster_bins.splitBAF">
+<code class="sig-prename descclassname"><span class="pre">hatchet.utils.cluster_bins.</span></code><code class="sig-name descname"><span class="pre">splitBAF</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">baf</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.cluster_bins.splitBAF" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-hatchet.utils.combine_counts">
+<span id="hatchet-utils-combine-counts-module"></span><h2>hatchet.utils.combine_counts module<a class="headerlink" href="#module-hatchet.utils.combine_counts" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt id="hatchet.utils.combine_counts.blocking">
+<code class="sig-prename descclassname"><span class="pre">hatchet.utils.combine_counts.</span></code><code class="sig-name descname"><span class="pre">blocking</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">L</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sample</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">phase</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">blocksize</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.combine_counts.blocking" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="hatchet.utils.combine_counts.combine">
+<code class="sig-prename descclassname"><span class="pre">hatchet.utils.combine_counts.</span></code><code class="sig-name descname"><span class="pre">combine</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">normalbins</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tumorbins</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tumorbafs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">diploidbaf</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">totalcounts</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chromosomes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">samples</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normal</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gamma</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">disable</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">phase</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">block</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.combine_counts.combine" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="hatchet.utils.combine_counts.computeBAFs">
+<code class="sig-prename descclassname"><span class="pre">hatchet.utils.combine_counts.</span></code><code class="sig-name descname"><span class="pre">computeBAFs</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">partition</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">samples</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">diploidbaf</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">phase</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">block</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.combine_counts.computeBAFs" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="hatchet.utils.combine_counts.main">
+<code class="sig-prename descclassname"><span class="pre">hatchet.utils.combine_counts.</span></code><code class="sig-name descname"><span class="pre">main</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.combine_counts.main" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="hatchet.utils.combine_counts.readBAFs">
+<code class="sig-prename descclassname"><span class="pre">hatchet.utils.combine_counts.</span></code><code class="sig-name descname"><span class="pre">readBAFs</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tumor</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.combine_counts.readBAFs" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="hatchet.utils.combine_counts.readBINs">
+<code class="sig-prename descclassname"><span class="pre">hatchet.utils.combine_counts.</span></code><code class="sig-name descname"><span class="pre">readBINs</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">normalbins</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tumorbins</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.combine_counts.readBINs" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="hatchet.utils.combine_counts.readPhase">
+<code class="sig-prename descclassname"><span class="pre">hatchet.utils.combine_counts.</span></code><code class="sig-name descname"><span class="pre">readPhase</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.combine_counts.readPhase" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="hatchet.utils.combine_counts.readTotalCounts">
+<code class="sig-prename descclassname"><span class="pre">hatchet.utils.combine_counts.</span></code><code class="sig-name descname"><span class="pre">readTotalCounts</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">samples</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normal</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.combine_counts.readTotalCounts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="hatchet.utils.combine_counts.splitBAF">
+<code class="sig-prename descclassname"><span class="pre">hatchet.utils.combine_counts.</span></code><code class="sig-name descname"><span class="pre">splitBAF</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">baf</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.combine_counts.splitBAF" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-hatchet.utils.config">
+<span id="hatchet-utils-config-module"></span><h2>hatchet.utils.config module<a class="headerlink" href="#module-hatchet.utils.config" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="hatchet.utils.config.Config">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">hatchet.utils.config.</span></code><code class="sig-name descname"><span class="pre">Config</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filenames</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.config.Config" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p class="rubric">Methods</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 66%" />
+<col style="width: 34%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>init_from_files</strong></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><strong>read</strong></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><strong>sections</strong></p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt id="hatchet.utils.config.Config.init_from_files">
+<code class="sig-name descname"><span class="pre">init_from_files</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filenames</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.config.Config.init_from_files" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="hatchet.utils.config.Config.read">
+<code class="sig-name descname"><span class="pre">read</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.config.Config.read" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="hatchet.utils.config.Config.sections">
+<code class="sig-name descname"><span class="pre">sections</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.config.Config.sections" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="hatchet.utils.config.ConfigSection">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">hatchet.utils.config.</span></code><code class="sig-name descname"><span class="pre">ConfigSection</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">section_proxy</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.config.ConfigSection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A thin wrapper over a ConfigParser’s SectionProxy object,
+that tries to infer the types of values, and makes them available as attributes
+Currently int/float/str are supported.</p>
+<p class="rubric">Methods</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 47%" />
+<col style="width: 53%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>items</strong></p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt id="hatchet.utils.config.ConfigSection.items">
+<code class="sig-name descname"><span class="pre">items</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.config.ConfigSection.items" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-hatchet.utils.count_alleles">
+<span id="hatchet-utils-count-alleles-module"></span><h2>hatchet.utils.count_alleles module<a class="headerlink" href="#module-hatchet.utils.count_alleles" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="hatchet.utils.count_alleles.AlleleCounter">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">hatchet.utils.count_alleles.</span></code><code class="sig-name descname"><span class="pre">AlleleCounter</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task_queue</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">result_queue</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">progress_bar</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bcftools</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reference</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">q</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Q</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mincov</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">E</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">snplist</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outdir</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.count_alleles.AlleleCounter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">multiprocessing.context.Process</span></code></p>
+<dl class="field-list simple">
+<dt class="field-odd">Attributes</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>authkey</strong></dt><dd></dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">daemon</span></code></dt><dd><p>Return whether process is a daemon</p>
+</dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">exitcode</span></code></dt><dd><p>Return exit code of process or <cite>None</cite> if it has yet to stop</p>
+</dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">ident</span></code></dt><dd><p>Return identifier (PID) of process or <cite>None</cite> if it has yet to start</p>
+</dd>
+<dt><strong>name</strong></dt><dd></dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">pid</span></code></dt><dd><p>Return identifier (PID) of process or <cite>None</cite> if it has yet to start</p>
+</dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">sentinel</span></code></dt><dd><p>Return a file descriptor (Unix) or handle (Windows) suitable for waiting for process termination.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Methods</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">close</span></code>()</p></td>
+<td><p>Close the Process object.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_alive</span></code>()</p></td>
+<td><p>Return whether process is alive</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">join</span></code>([timeout])</p></td>
+<td><p>Wait until child process terminates</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">kill</span></code>()</p></td>
+<td><p>Terminate process; sends SIGKILL signal or uses TerminateProcess()</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hatchet.utils.count_alleles.AlleleCounter.run" title="hatchet.utils.count_alleles.AlleleCounter.run"><code class="xref py py-obj docutils literal notranslate"><span class="pre">run</span></code></a>()</p></td>
+<td><p>Method to be run in sub-process; can be overridden in sub-class</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">start</span></code>()</p></td>
+<td><p>Start child process</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">terminate</span></code>()</p></td>
+<td><p>Terminate process; sends SIGTERM signal or uses TerminateProcess()</p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 62%" />
+<col style="width: 38%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>countAlleles</strong></p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt id="hatchet.utils.count_alleles.AlleleCounter.countAlleles">
+<code class="sig-name descname"><span class="pre">countAlleles</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bamfile</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">samplename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chromosome</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.count_alleles.AlleleCounter.countAlleles" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="hatchet.utils.count_alleles.AlleleCounter.run">
+<code class="sig-name descname"><span class="pre">run</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.count_alleles.AlleleCounter.run" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to be run in sub-process; can be overridden in sub-class</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt id="hatchet.utils.count_alleles.checkShift">
+<code class="sig-prename descclassname"><span class="pre">hatchet.utils.count_alleles.</span></code><code class="sig-name descname"><span class="pre">checkShift</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">countA</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">countB</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxshift</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.count_alleles.checkShift" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="hatchet.utils.count_alleles.counting">
+<code class="sig-prename descclassname"><span class="pre">hatchet.utils.count_alleles.</span></code><code class="sig-name descname"><span class="pre">counting</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bcftools</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reference</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">samples</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chromosomes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_workers</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">snplist</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">q</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Q</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mincov</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">E</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outdir</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.count_alleles.counting" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="hatchet.utils.count_alleles.isHet">
+<code class="sig-prename descclassname"><span class="pre">hatchet.utils.count_alleles.</span></code><code class="sig-name descname"><span class="pre">isHet</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">countA</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">countB</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gamma</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.count_alleles.isHet" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="hatchet.utils.count_alleles.main">
+<code class="sig-prename descclassname"><span class="pre">hatchet.utils.count_alleles.</span></code><code class="sig-name descname"><span class="pre">main</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.count_alleles.main" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="hatchet.utils.count_alleles.selectHetSNPs">
+<code class="sig-prename descclassname"><span class="pre">hatchet.utils.count_alleles.</span></code><code class="sig-name descname"><span class="pre">selectHetSNPs</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">counts</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gamma</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxshift</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.count_alleles.selectHetSNPs" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-hatchet.utils.count_reads">
+<span id="hatchet-utils-count-reads-module"></span><h2>hatchet.utils.count_reads module<a class="headerlink" href="#module-hatchet.utils.count_reads" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt id="hatchet.utils.count_reads.knownRegions">
+<code class="sig-prename descclassname"><span class="pre">hatchet.utils.count_reads.</span></code><code class="sig-name descname"><span class="pre">knownRegions</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">refdict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chromosomes</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.count_reads.knownRegions" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="hatchet.utils.count_reads.logArgs">
+<code class="sig-prename descclassname"><span class="pre">hatchet.utils.count_reads.</span></code><code class="sig-name descname"><span class="pre">logArgs</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">width</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.count_reads.logArgs" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="hatchet.utils.count_reads.main">
+<code class="sig-prename descclassname"><span class="pre">hatchet.utils.count_reads.</span></code><code class="sig-name descname"><span class="pre">main</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.count_reads.main" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-hatchet.utils.genotype_snps">
+<span id="hatchet-utils-genotype-snps-module"></span><h2>hatchet.utils.genotype_snps module<a class="headerlink" href="#module-hatchet.utils.genotype_snps" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="hatchet.utils.genotype_snps.Caller">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">hatchet.utils.genotype_snps.</span></code><code class="sig-name descname"><span class="pre">Caller</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task_queue</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">result_queue</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">progress_bar</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bcftools</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reference</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">q</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Q</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mincov</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">E</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outdir</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">snplist</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.genotype_snps.Caller" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">multiprocessing.context.Process</span></code></p>
+<dl class="field-list simple">
+<dt class="field-odd">Attributes</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>authkey</strong></dt><dd></dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">daemon</span></code></dt><dd><p>Return whether process is a daemon</p>
+</dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">exitcode</span></code></dt><dd><p>Return exit code of process or <cite>None</cite> if it has yet to stop</p>
+</dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">ident</span></code></dt><dd><p>Return identifier (PID) of process or <cite>None</cite> if it has yet to start</p>
+</dd>
+<dt><strong>name</strong></dt><dd></dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">pid</span></code></dt><dd><p>Return identifier (PID) of process or <cite>None</cite> if it has yet to start</p>
+</dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">sentinel</span></code></dt><dd><p>Return a file descriptor (Unix) or handle (Windows) suitable for waiting for process termination.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Methods</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">close</span></code>()</p></td>
+<td><p>Close the Process object.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_alive</span></code>()</p></td>
+<td><p>Return whether process is alive</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">join</span></code>([timeout])</p></td>
+<td><p>Wait until child process terminates</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">kill</span></code>()</p></td>
+<td><p>Terminate process; sends SIGKILL signal or uses TerminateProcess()</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hatchet.utils.genotype_snps.Caller.run" title="hatchet.utils.genotype_snps.Caller.run"><code class="xref py py-obj docutils literal notranslate"><span class="pre">run</span></code></a>()</p></td>
+<td><p>Method to be run in sub-process; can be overridden in sub-class</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">start</span></code>()</p></td>
+<td><p>Start child process</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">terminate</span></code>()</p></td>
+<td><p>Terminate process; sends SIGTERM signal or uses TerminateProcess()</p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 55%" />
+<col style="width: 45%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>callSNPs</strong></p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt id="hatchet.utils.genotype_snps.Caller.callSNPs">
+<code class="sig-name descname"><span class="pre">callSNPs</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bamfile</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">samplename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chromosome</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.genotype_snps.Caller.callSNPs" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="hatchet.utils.genotype_snps.Caller.run">
+<code class="sig-name descname"><span class="pre">run</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.genotype_snps.Caller.run" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to be run in sub-process; can be overridden in sub-class</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt id="hatchet.utils.genotype_snps.call">
+<code class="sig-prename descclassname"><span class="pre">hatchet.utils.genotype_snps.</span></code><code class="sig-name descname"><span class="pre">call</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bcftools</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reference</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">samples</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chromosomes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_workers</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">q</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Q</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mincov</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">E</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outdir</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">snplist</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.genotype_snps.call" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="hatchet.utils.genotype_snps.main">
+<code class="sig-prename descclassname"><span class="pre">hatchet.utils.genotype_snps.</span></code><code class="sig-name descname"><span class="pre">main</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.genotype_snps.main" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-hatchet.utils.plot_bins">
+<span id="hatchet-utils-plot-bins-module"></span><h2>hatchet.utils.plot_bins module<a class="headerlink" href="#module-hatchet.utils.plot_bins" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt id="hatchet.utils.plot_bins.addchr">
+<code class="sig-prename descclassname"><span class="pre">hatchet.utils.plot_bins.</span></code><code class="sig-name descname"><span class="pre">addchr</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pos</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.plot_bins.addchr" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="hatchet.utils.plot_bins.argmax">
+<code class="sig-prename descclassname"><span class="pre">hatchet.utils.plot_bins.</span></code><code class="sig-name descname"><span class="pre">argmax</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">d</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.plot_bins.argmax" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="hatchet.utils.plot_bins.argmin">
+<code class="sig-prename descclassname"><span class="pre">hatchet.utils.plot_bins.</span></code><code class="sig-name descname"><span class="pre">argmin</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">d</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.plot_bins.argmin" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="hatchet.utils.plot_bins.baf">
+<code class="sig-prename descclassname"><span class="pre">hatchet.utils.plot_bins.</span></code><code class="sig-name descname"><span class="pre">baf</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bbc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">out</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.plot_bins.baf" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="hatchet.utils.plot_bins.bb">
+<code class="sig-prename descclassname"><span class="pre">hatchet.utils.plot_bins.</span></code><code class="sig-name descname"><span class="pre">bb</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bbc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clusters</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">out</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.plot_bins.bb" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="hatchet.utils.plot_bins.clubaf">
+<code class="sig-prename descclassname"><span class="pre">hatchet.utils.plot_bins.</span></code><code class="sig-name descname"><span class="pre">clubaf</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bbc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clusters</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">out</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.plot_bins.clubaf" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="hatchet.utils.plot_bins.clurdr">
+<code class="sig-prename descclassname"><span class="pre">hatchet.utils.plot_bins.</span></code><code class="sig-name descname"><span class="pre">clurdr</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bbc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clusters</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">out</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.plot_bins.clurdr" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="hatchet.utils.plot_bins.clus">
+<code class="sig-prename descclassname"><span class="pre">hatchet.utils.plot_bins.</span></code><code class="sig-name descname"><span class="pre">clus</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">seg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">out</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.plot_bins.clus" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="hatchet.utils.plot_bins.cluster_bins">
+<code class="sig-prename descclassname"><span class="pre">hatchet.utils.plot_bins.</span></code><code class="sig-name descname"><span class="pre">cluster_bins</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bbc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clusters</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">out</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clust_order</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pal</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.plot_bins.cluster_bins" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="hatchet.utils.plot_bins.coordinates">
+<code class="sig-prename descclassname"><span class="pre">hatchet.utils.plot_bins.</span></code><code class="sig-name descname"><span class="pre">coordinates</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">g</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.plot_bins.coordinates" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="hatchet.utils.plot_bins.debug">
+<code class="sig-prename descclassname"><span class="pre">hatchet.utils.plot_bins.</span></code><code class="sig-name descname"><span class="pre">debug</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.plot_bins.debug" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="hatchet.utils.plot_bins.error">
+<code class="sig-prename descclassname"><span class="pre">hatchet.utils.plot_bins.</span></code><code class="sig-name descname"><span class="pre">error</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.plot_bins.error" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="hatchet.utils.plot_bins.info">
+<code class="sig-prename descclassname"><span class="pre">hatchet.utils.plot_bins.</span></code><code class="sig-name descname"><span class="pre">info</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.plot_bins.info" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="hatchet.utils.plot_bins.isfloat">
+<code class="sig-prename descclassname"><span class="pre">hatchet.utils.plot_bins.</span></code><code class="sig-name descname"><span class="pre">isfloat</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.plot_bins.isfloat" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="hatchet.utils.plot_bins.join">
+<code class="sig-prename descclassname"><span class="pre">hatchet.utils.plot_bins.</span></code><code class="sig-name descname"><span class="pre">join</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bbc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clusters</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">resolution</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.plot_bins.join" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="hatchet.utils.plot_bins.log">
+<code class="sig-prename descclassname"><span class="pre">hatchet.utils.plot_bins.</span></code><code class="sig-name descname"><span class="pre">log</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.plot_bins.log" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="hatchet.utils.plot_bins.main">
+<code class="sig-prename descclassname"><span class="pre">hatchet.utils.plot_bins.</span></code><code class="sig-name descname"><span class="pre">main</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.plot_bins.main" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="hatchet.utils.plot_bins.rdr">
+<code class="sig-prename descclassname"><span class="pre">hatchet.utils.plot_bins.</span></code><code class="sig-name descname"><span class="pre">rdr</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bbc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">out</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.plot_bins.rdr" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="hatchet.utils.plot_bins.readBBC">
+<code class="sig-prename descclassname"><span class="pre">hatchet.utils.plot_bins.</span></code><code class="sig-name descname"><span class="pre">readBBC</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inp</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.plot_bins.readBBC" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="hatchet.utils.plot_bins.readSEG">
+<code class="sig-prename descclassname"><span class="pre">hatchet.utils.plot_bins.</span></code><code class="sig-name descname"><span class="pre">readSEG</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inp</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.plot_bins.readSEG" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="hatchet.utils.plot_bins.select">
+<code class="sig-prename descclassname"><span class="pre">hatchet.utils.plot_bins.</span></code><code class="sig-name descname"><span class="pre">select</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bbc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clusters</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.plot_bins.select" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="hatchet.utils.plot_bins.sortchr">
+<code class="sig-prename descclassname"><span class="pre">hatchet.utils.plot_bins.</span></code><code class="sig-name descname"><span class="pre">sortchr</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.plot_bins.sortchr" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="hatchet.utils.plot_bins.warning">
+<code class="sig-prename descclassname"><span class="pre">hatchet.utils.plot_bins.</span></code><code class="sig-name descname"><span class="pre">warning</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.plot_bins.warning" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-hatchet.utils.plot_cn">
+<span id="hatchet-utils-plot-cn-module"></span><h2>hatchet.utils.plot_cn module<a class="headerlink" href="#module-hatchet.utils.plot_cn" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt id="hatchet.utils.plot_cn.addchr">
+<code class="sig-prename descclassname"><span class="pre">hatchet.utils.plot_cn.</span></code><code class="sig-name descname"><span class="pre">addchr</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">g</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pos</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.plot_cn.addchr" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="hatchet.utils.plot_cn.addchrplt">
+<code class="sig-prename descclassname"><span class="pre">hatchet.utils.plot_cn.</span></code><code class="sig-name descname"><span class="pre">addchrplt</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pos</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.plot_cn.addchrplt" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="hatchet.utils.plot_cn.allelicprofiles">
+<code class="sig-prename descclassname"><span class="pre">hatchet.utils.plot_cn.</span></code><code class="sig-name descname"><span class="pre">allelicprofiles</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tumor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clones</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">props</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">out</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.plot_cn.allelicprofiles" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="hatchet.utils.plot_cn.allelicproportions">
+<code class="sig-prename descclassname"><span class="pre">hatchet.utils.plot_cn.</span></code><code class="sig-name descname"><span class="pre">allelicproportions</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tumor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">base</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clones</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">props</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">out</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.plot_cn.allelicproportions" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="hatchet.utils.plot_cn.argmax">
+<code class="sig-prename descclassname"><span class="pre">hatchet.utils.plot_cn.</span></code><code class="sig-name descname"><span class="pre">argmax</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">d</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.plot_cn.argmax" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="hatchet.utils.plot_cn.argmin">
+<code class="sig-prename descclassname"><span class="pre">hatchet.utils.plot_cn.</span></code><code class="sig-name descname"><span class="pre">argmin</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">d</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.plot_cn.argmin" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="hatchet.utils.plot_cn.cndistance">
+<code class="sig-prename descclassname"><span class="pre">hatchet.utils.plot_cn.</span></code><code class="sig-name descname"><span class="pre">cndistance</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">u</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.plot_cn.cndistance" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="hatchet.utils.plot_cn.cnproportions">
+<code class="sig-prename descclassname"><span class="pre">hatchet.utils.plot_cn.</span></code><code class="sig-name descname"><span class="pre">cnproportions</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tumor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">base</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clones</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">props</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">out</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.plot_cn.cnproportions" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="hatchet.utils.plot_cn.debug">
+<code class="sig-prename descclassname"><span class="pre">hatchet.utils.plot_cn.</span></code><code class="sig-name descname"><span class="pre">debug</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.plot_cn.debug" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="hatchet.utils.plot_cn.error">
+<code class="sig-prename descclassname"><span class="pre">hatchet.utils.plot_cn.</span></code><code class="sig-name descname"><span class="pre">error</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.plot_cn.error" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="hatchet.utils.plot_cn.gridmixtures">
+<code class="sig-prename descclassname"><span class="pre">hatchet.utils.plot_cn.</span></code><code class="sig-name descname"><span class="pre">gridmixtures</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tumor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">base</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clones</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">props</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">out</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.plot_cn.gridmixtures" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="hatchet.utils.plot_cn.gridprofiles">
+<code class="sig-prename descclassname"><span class="pre">hatchet.utils.plot_cn.</span></code><code class="sig-name descname"><span class="pre">gridprofiles</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tumor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">base</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clones</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">props</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">out</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.plot_cn.gridprofiles" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="hatchet.utils.plot_cn.gridprofilesreduced">
+<code class="sig-prename descclassname"><span class="pre">hatchet.utils.plot_cn.</span></code><code class="sig-name descname"><span class="pre">gridprofilesreduced</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tumor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">base</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clones</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">props</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">out</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.plot_cn.gridprofilesreduced" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="hatchet.utils.plot_cn.info">
+<code class="sig-prename descclassname"><span class="pre">hatchet.utils.plot_cn.</span></code><code class="sig-name descname"><span class="pre">info</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.plot_cn.info" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="hatchet.utils.plot_cn.intergridfullprofiles">
+<code class="sig-prename descclassname"><span class="pre">hatchet.utils.plot_cn.</span></code><code class="sig-name descname"><span class="pre">intergridfullprofiles</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tumor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">base</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clones</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">props</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">out</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.plot_cn.intergridfullprofiles" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="hatchet.utils.plot_cn.intergridreducedprofiles">
+<code class="sig-prename descclassname"><span class="pre">hatchet.utils.plot_cn.</span></code><code class="sig-name descname"><span class="pre">intergridreducedprofiles</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tumor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">base</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clones</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">props</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">out</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.plot_cn.intergridreducedprofiles" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="hatchet.utils.plot_cn.intergridsamplesclusters">
+<code class="sig-prename descclassname"><span class="pre">hatchet.utils.plot_cn.</span></code><code class="sig-name descname"><span class="pre">intergridsamplesclusters</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tumor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">base</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clones</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">props</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">out</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.plot_cn.intergridsamplesclusters" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="hatchet.utils.plot_cn.intergridsubclonality">
+<code class="sig-prename descclassname"><span class="pre">hatchet.utils.plot_cn.</span></code><code class="sig-name descname"><span class="pre">intergridsubclonality</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tumor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">base</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clones</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">props</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">out</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.plot_cn.intergridsubclonality" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="hatchet.utils.plot_cn.interjoin">
+<code class="sig-prename descclassname"><span class="pre">hatchet.utils.plot_cn.</span></code><code class="sig-name descname"><span class="pre">interjoin</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tumor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clones</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">resolution</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.plot_cn.interjoin" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="hatchet.utils.plot_cn.interreduction">
+<code class="sig-prename descclassname"><span class="pre">hatchet.utils.plot_cn.</span></code><code class="sig-name descname"><span class="pre">interreduction</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">proj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">base</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.plot_cn.interreduction" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="hatchet.utils.plot_cn.isfloat">
+<code class="sig-prename descclassname"><span class="pre">hatchet.utils.plot_cn.</span></code><code class="sig-name descname"><span class="pre">isfloat</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.plot_cn.isfloat" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="hatchet.utils.plot_cn.join">
+<code class="sig-prename descclassname"><span class="pre">hatchet.utils.plot_cn.</span></code><code class="sig-name descname"><span class="pre">join</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tumor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clones</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">resolution</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.plot_cn.join" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="hatchet.utils.plot_cn.log">
+<code class="sig-prename descclassname"><span class="pre">hatchet.utils.plot_cn.</span></code><code class="sig-name descname"><span class="pre">log</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.plot_cn.log" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="hatchet.utils.plot_cn.main">
+<code class="sig-prename descclassname"><span class="pre">hatchet.utils.plot_cn.</span></code><code class="sig-name descname"><span class="pre">main</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.plot_cn.main" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="hatchet.utils.plot_cn.multiple">
+<code class="sig-prename descclassname"><span class="pre">hatchet.utils.plot_cn.</span></code><code class="sig-name descname"><span class="pre">multiple</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tumor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clones</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">props</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">base</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.plot_cn.multiple" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="hatchet.utils.plot_cn.parsing_arguments">
+<code class="sig-prename descclassname"><span class="pre">hatchet.utils.plot_cn.</span></code><code class="sig-name descname"><span class="pre">parsing_arguments</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.plot_cn.parsing_arguments" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parse command line arguments
+Returns:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="hatchet.utils.plot_cn.pp">
+<code class="sig-prename descclassname"><span class="pre">hatchet.utils.plot_cn.</span></code><code class="sig-name descname"><span class="pre">pp</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tumor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clones</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">props</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.plot_cn.pp" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="hatchet.utils.plot_cn.profiles">
+<code class="sig-prename descclassname"><span class="pre">hatchet.utils.plot_cn.</span></code><code class="sig-name descname"><span class="pre">profiles</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tumor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clones</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">props</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">out</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.plot_cn.profiles" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="hatchet.utils.plot_cn.readUCN">
+<code class="sig-prename descclassname"><span class="pre">hatchet.utils.plot_cn.</span></code><code class="sig-name descname"><span class="pre">readUCN</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inputs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">patnames</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.plot_cn.readUCN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="hatchet.utils.plot_cn.reduction">
+<code class="sig-prename descclassname"><span class="pre">hatchet.utils.plot_cn.</span></code><code class="sig-name descname"><span class="pre">reduction</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">proj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">base</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.plot_cn.reduction" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="hatchet.utils.plot_cn.segmenting">
+<code class="sig-prename descclassname"><span class="pre">hatchet.utils.plot_cn.</span></code><code class="sig-name descname"><span class="pre">segmenting</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tumor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clones</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">props</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.plot_cn.segmenting" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="hatchet.utils.plot_cn.similarity">
+<code class="sig-prename descclassname"><span class="pre">hatchet.utils.plot_cn.</span></code><code class="sig-name descname"><span class="pre">similarity</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">u</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.plot_cn.similarity" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="hatchet.utils.plot_cn.similaritysample">
+<code class="sig-prename descclassname"><span class="pre">hatchet.utils.plot_cn.</span></code><code class="sig-name descname"><span class="pre">similaritysample</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">u</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.plot_cn.similaritysample" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="hatchet.utils.plot_cn.single">
+<code class="sig-prename descclassname"><span class="pre">hatchet.utils.plot_cn.</span></code><code class="sig-name descname"><span class="pre">single</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tumor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clones</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">props</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">base</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.plot_cn.single" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="hatchet.utils.plot_cn.sortchr">
+<code class="sig-prename descclassname"><span class="pre">hatchet.utils.plot_cn.</span></code><code class="sig-name descname"><span class="pre">sortchr</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.plot_cn.sortchr" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="hatchet.utils.plot_cn.subclonal">
+<code class="sig-prename descclassname"><span class="pre">hatchet.utils.plot_cn.</span></code><code class="sig-name descname"><span class="pre">subclonal</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tumor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">base</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clones</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">props</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">out</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.plot_cn.subclonal" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="hatchet.utils.plot_cn.warning">
+<code class="sig-prename descclassname"><span class="pre">hatchet.utils.plot_cn.</span></code><code class="sig-name descname"><span class="pre">warning</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.plot_cn.warning" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-hatchet.utils.run">
+<span id="hatchet-utils-run-module"></span><h2>hatchet.utils.run module<a class="headerlink" href="#module-hatchet.utils.run" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt id="hatchet.utils.run.main">
+<code class="sig-prename descclassname"><span class="pre">hatchet.utils.run.</span></code><code class="sig-name descname"><span class="pre">main</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatchet.utils.run.main" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-hatchet.utils">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-hatchet.utils" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="hatchet.bin.html" class="btn btn-neutral float-left" title="hatchet.bin package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Princeton University.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

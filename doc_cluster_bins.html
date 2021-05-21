@@ -1,0 +1,415 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>cluster-bins &mdash; HATCHet 0.3.1 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> HATCHet
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.3.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="README.html">HATCHet</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">Modules</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">HATCHet</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>cluster-bins</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/doc_cluster_bins.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="cluster-bins">
+<h1>cluster-bins<a class="headerlink" href="#cluster-bins" title="Permalink to this headline">¶</a></h1>
+<p>This step globally clusters genomic bins along the entire genome and jointly across tumor samples, and estimate the corresponding values of RDR and BAF for every cluster in every sample.
+cluster-bins uses BNPY for clustering; the main parameters can be tuned for dealing with special datasets, especially those with high variance or low tumor purity (see Main parameters below).</p>
+<div class="section" id="input">
+<h2>Input<a class="headerlink" href="#input" title="Permalink to this headline">¶</a></h2>
+<p>cluster-bins takes in input a tab-separated file with the following fields.</p>
+<table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Field</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">CHR</span></code></p></td>
+<td><p>Name of a chromosome</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">START</span></code></p></td>
+<td><p>Starting genomic position of a genomic bin in <code class="docutils literal notranslate"><span class="pre">CHR</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">END</span></code></p></td>
+<td><p>Ending genomic position of a genomic bin in <code class="docutils literal notranslate"><span class="pre">CHR</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">SAMPLE</span></code></p></td>
+<td><p>Name of a tumor sample</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">RD</span></code></p></td>
+<td><p>RDR of the bin in <code class="docutils literal notranslate"><span class="pre">SAMPLE</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">#SNPS</span></code></p></td>
+<td><p>Number of SNPs present in the bin in <code class="docutils literal notranslate"><span class="pre">SAMPLE</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">COV</span></code></p></td>
+<td><p>Average coverage in the bin in <code class="docutils literal notranslate"><span class="pre">SAMPLE</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">ALPHA</span></code></p></td>
+<td><p>Alpha parameter related to the binomial model of BAF for the bin in <code class="docutils literal notranslate"><span class="pre">SAMPLE</span></code>, typically total number of reads from A allele</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">BETA</span></code></p></td>
+<td><p>Beta parameter related to the binomial model of BAF for the bin in <code class="docutils literal notranslate"><span class="pre">SAMPLE</span></code>, typically total number of reads from B allele</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">BAF</span></code></p></td>
+<td><p>BAF of the bin in <code class="docutils literal notranslate"><span class="pre">SAMPLE</span></code></p></td>
+</tr>
+</tbody>
+</table>
+<p>The fields <code class="docutils literal notranslate"><span class="pre">#SNPS</span></code>, <code class="docutils literal notranslate"><span class="pre">COV</span></code>, <code class="docutils literal notranslate"><span class="pre">ALPHA</span></code>, and <code class="docutils literal notranslate"><span class="pre">BETA</span></code> are currently deprecated and their values are ignored.</p>
+</div>
+<div class="section" id="output">
+<h2>Output<a class="headerlink" href="#output" title="Permalink to this headline">¶</a></h2>
+<p>cluster-bins produces two tab-separated files:</p>
+<ol class="simple">
+<li><p>A file of clustered genomic bins, specified by the flag <code class="docutils literal notranslate"><span class="pre">-O</span></code>, <code class="docutils literal notranslate"><span class="pre">--outbins</span></code>. The tab separated file has the same fields as the input plus a last field <code class="docutils literal notranslate"><span class="pre">CLUSTER</span></code> which specifies the name of the corresponding cluster.</p></li>
+<li><p>A file of clustered genomic bins, specified by the flag <code class="docutils literal notranslate"><span class="pre">-o</span></code>, <code class="docutils literal notranslate"><span class="pre">--outsegments</span></code>. The tab separated file has the following fields.</p></li>
+</ol>
+<table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Field</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">ID</span></code></p></td>
+<td><p>The name of a cluster</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">SAMPLE</span></code></p></td>
+<td><p>The name of a sample</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">#BINS</span></code></p></td>
+<td><p>The number of bins included in <code class="docutils literal notranslate"><span class="pre">ID</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">RD</span></code></p></td>
+<td><p>The RDR of the cluster <code class="docutils literal notranslate"><span class="pre">ID</span></code> in <code class="docutils literal notranslate"><span class="pre">SAMPLE</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">#SNPS</span></code></p></td>
+<td><p>The total number of SNPs in the cluster <code class="docutils literal notranslate"><span class="pre">ID</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">COV</span></code></p></td>
+<td><p>The average coverage in the cluster <code class="docutils literal notranslate"><span class="pre">ID</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">ALPHA</span></code></p></td>
+<td><p>The alpha parameter of the binomial model for the BAF of the cluster <code class="docutils literal notranslate"><span class="pre">ID</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">BETA</span></code></p></td>
+<td><p>The beta parameter of the binomial model for the BAF of the cluster <code class="docutils literal notranslate"><span class="pre">ID</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">BAF</span></code></p></td>
+<td><p>The BAF of the cluster <code class="docutils literal notranslate"><span class="pre">ID</span></code> in <code class="docutils literal notranslate"><span class="pre">SAMPLE</span></code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="main-parameters">
+<h2>Main parameters<a class="headerlink" href="#main-parameters" title="Permalink to this headline">¶</a></h2>
+<p>cluster-bins has 4 main features with some main parameters that allow  to improve the clustering.</p>
+<ol class="simple">
+<li><p>cluster-bins has a parameter <code class="docutils literal notranslate"><span class="pre">-d</span></code>, <code class="docutils literal notranslate"><span class="pre">--diploidbaf</span></code> that specifies the maximum expected shift from 0.5 for BAF for a diploid or tetraploid cluster (i.e. with copy-number states (1, 1) or (2, 2)). This threshold is used for two goals: (1) To identify the diploid or tetraploid cluster which is used to correct the estimated BAF of potentially biased clusters. (2) To identify potentially biased clusters.
+The default value of this parameter (0.08) is typically sufficient for most of the datasets, but its value can be changed or tuned to accommodate the features of special datasets.
+In particular, the value of this threshold depends on the variance in the data (related to noise and coverage); generally, higher variance requires a higher shift.
+Information provided by plot-bins can be crucial to decide whether one needs to change this value in special datasets.</p></li>
+<li><p>cluster-bins has some main parameters to control the clustering; the default values for most of these parameters allow to deal with most of datasets, but their values can be changed or tuned to accommodate the features of special datasets.
+plot-bins provides informative plots that can be used to assess the quality of the clustering and evaluate the need of changing some parameters for special datasets.
+If your clusters do not appear to be cohesive, try lowering the maximum number of clusters (<code class="docutils literal notranslate"><span class="pre">-K</span></code>) which will force cluster-bins to infer fewer clusters.</p></li>
+</ol>
+<table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Usage</p></th>
+<th class="head"><p>Default</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">-K</span></code>, <code class="docutils literal notranslate"><span class="pre">--initclusters</span></code></p></td>
+<td><p>Maximum number of clusters</p></td>
+<td><p>The parameter specifies the maximum number of clusters to infer, i.e., the maximum number of GMM components</p></td>
+<td><p>50</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">-c</span></code>, <code class="docutils literal notranslate"><span class="pre">--concentration</span></code></p></td>
+<td><p>Concentration parameter for clustering</p></td>
+<td><p>This parameter determines how much confidence the GMM has in different types of clusterings. Higher values (e.g., 10 or 100)  favor fewer clusters, and smaller values (e.g., 0.01 or 0.001) favor more clusters. For experts, this is the alpha parameter for the Dirichlet process prior.</p></td>
+<td><p>1/K</p></td>
+</tr>
+</tbody>
+</table>
+<ol class="simple">
+<li><p>cluster-bins offers a bootstraping approach that allows a succesfull clustering even when there is a limited number genomic bins that are considred. The bootstraping approach generates sinthetic (i.e. used only for clustering) bins based on the data of the given bins. The bootstraping is controlled by the following parameters.</p></li>
+</ol>
+<table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Usage</p></th>
+<th class="head"><p>Default</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">-u</span></code>, <code class="docutils literal notranslate"><span class="pre">--bootclustering</span></code></p></td>
+<td><p>Number of sinthetic bins to generate</p></td>
+<td><p>Sinthetic bins can be generated based on the RDR and BAF of given bins and are added only to the clustering to improve it when the total number of bins is low (e.g. when considering data from WES)</p></td>
+<td><p>0, not used</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">-dR</span></code>,<code class="docutils literal notranslate"><span class="pre">--ratiodeviation</span></code></p></td>
+<td><p>Standard deviation for generate RDR of sinthetic bins</p></td>
+<td><p>The parameter affects the variance of the generated data, this value can be estimated from given bins and plot-bins generates informative plots to do this</p></td>
+<td><p>0.02</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">-dB</span></code>,<code class="docutils literal notranslate"><span class="pre">--bafdeviation</span></code></p></td>
+<td><p>Standard deviation for generate BAF of sinthetic bins</p></td>
+<td><p>The parameter affects the variance of the generated data, this value can be estimated from given bins and plot-bins generates informative plots to do this</p></td>
+<td><p>0.02</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">-s</span></code>, <code class="docutils literal notranslate"><span class="pre">--seed</span></code></p></td>
+<td><p>Random seed</p></td>
+<td><p>The value is used to seed the random generation of RDR and BAF of synthetic bins</p></td>
+<td><p>0</p></td>
+</tr>
+</tbody>
+</table>
+<ol class="simple">
+<li><p>cluster-bins offers a basic iterative process to merge clusters according to given tolerances. This feature can be used to refine the results of BNPY clustering and merge distinct clusters that are not sufficiently distinguished. This process can be controlled by the following parameters.</p></li>
+</ol>
+<table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Usage</p></th>
+<th class="head"><p>Default</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">-tR</span></code>, <code class="docutils literal notranslate"><span class="pre">--tolerancerdr</span></code></p></td>
+<td><p>Tolerance for RDR</p></td>
+<td><p>The value is used to determine when two clusters should be merged in terms of RDR</p></td>
+<td><p>0.0, merging is not performed</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">-tB</span></code>, <code class="docutils literal notranslate"><span class="pre">--tolerancebaf</span></code></p></td>
+<td><p>Tolerance for BAF</p></td>
+<td><p>The value is used to determine when two clusters should be merged in terms of BAF</p></td>
+<td><p>0.0, merging is not performed</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="optional-parameters">
+<h2>Optional parameters<a class="headerlink" href="#optional-parameters" title="Permalink to this headline">¶</a></h2>
+<table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Usage</p></th>
+<th class="head"><p>Default</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">-v</span></code>, <code class="docutils literal notranslate"><span class="pre">--verbose</span></code></p></td>
+<td><p>Verbose logging flag</p></td>
+<td><p>When enabled, combine-counts outputs a verbose log of the executiong</p></td>
+<td><p>Not used</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">-r</span></code>, <code class="docutils literal notranslate"><span class="pre">--disablebar</span></code></p></td>
+<td><p>Disabling progress-bar flag</p></td>
+<td><p>When enabled, the output progress bar is disabled</p></td>
+<td><p>Not used</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Princeton University.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

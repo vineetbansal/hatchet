@@ -1,0 +1,19 @@
+hatchet package
+===============
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   hatchet.bin
+   hatchet.utils
+
+Module contents
+---------------
+
+.. automodule:: hatchet
+   :members:
+   :undoc-members:
+   :show-inheritance:

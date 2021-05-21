@@ -1,0 +1,442 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>plot-bins &mdash; HATCHet 0.3.1 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> HATCHet
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.3.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="README.html">HATCHet</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">Modules</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">HATCHet</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>plot-bins</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/doc_plot_bins.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="plot-bins">
+<h1>plot-bins<a class="headerlink" href="#plot-bins" title="Permalink to this headline">¶</a></h1>
+<p>This step produces informative plots concerning the computed RDRs, BAFs, and clusters.
+The information produced by this step are important to validate the compute clusters of genomic regions and help to tune the parameters for better deal with special datasets.
+cluster-bins produces different plots which need to be specified by different commands and require different input.</p>
+<div class="section" id="input">
+<h2>Input<a class="headerlink" href="#input" title="Permalink to this headline">¶</a></h2>
+<p>plot-bins considers two different inputs which are tab-separated files, one is mandatory and the other is only required for certain command:</p>
+<ol class="simple">
+<li><p>A file of clustered genomic bins, specified without any flag and with the following fields.</p></li>
+</ol>
+<table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Field</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">CHR</span></code></p></td>
+<td><p>Name of a chromosome</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">START</span></code></p></td>
+<td><p>Starting genomic position of a genomic bin in <code class="docutils literal notranslate"><span class="pre">CHR</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">END</span></code></p></td>
+<td><p>Ending genomic position of a genomic bin in <code class="docutils literal notranslate"><span class="pre">CHR</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">SAMPLE</span></code></p></td>
+<td><p>Name of a tumor sample</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">RD</span></code></p></td>
+<td><p>RDR of the bin in <code class="docutils literal notranslate"><span class="pre">SAMPLE</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">#SNPS</span></code></p></td>
+<td><p>Number of SNPs present in the bin in <code class="docutils literal notranslate"><span class="pre">SAMPLE</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">COV</span></code></p></td>
+<td><p>Average coverage in the bin in <code class="docutils literal notranslate"><span class="pre">SAMPLE</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">ALPHA</span></code></p></td>
+<td><p>Alpha parameter related to the binomial model of BAF for the bin in <code class="docutils literal notranslate"><span class="pre">SAMPLE</span></code>, typically total number of reads from A allele</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">BETA</span></code></p></td>
+<td><p>Beta parameter related to the binomial model of BAF for the bin in <code class="docutils literal notranslate"><span class="pre">SAMPLE</span></code>, typically total number of reads from B allele</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">BAF</span></code></p></td>
+<td><p>BAF of the bin in <code class="docutils literal notranslate"><span class="pre">SAMPLE</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">CLUSTER</span></code></p></td>
+<td><p>The name of the corresponding cluster of the bin in <code class="docutils literal notranslate"><span class="pre">SAMPLE</span></code></p></td>
+</tr>
+</tbody>
+</table>
+<ol class="simple">
+<li><p>A file of clusters, which is required only by commands and it is specified through the flag <code class="docutils literal notranslate"><span class="pre">-s</span></code>, <code class="docutils literal notranslate"><span class="pre">--segfile</span></code>. The file has the following fields.</p></li>
+</ol>
+<table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Field</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">ID</span></code></p></td>
+<td><p>The name of a cluster</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">SAMPLE</span></code></p></td>
+<td><p>The name of a sample</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">#BINS</span></code></p></td>
+<td><p>The number of bins included in <code class="docutils literal notranslate"><span class="pre">ID</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">RD</span></code></p></td>
+<td><p>The RDR of the cluster <code class="docutils literal notranslate"><span class="pre">ID</span></code> in <code class="docutils literal notranslate"><span class="pre">SAMPLE</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">#SNPS</span></code></p></td>
+<td><p>The total number of SNPs in the cluster <code class="docutils literal notranslate"><span class="pre">ID</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">COV</span></code></p></td>
+<td><p>The average coverage in the cluster <code class="docutils literal notranslate"><span class="pre">ID</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">ALPHA</span></code></p></td>
+<td><p>The alpha parameter of the binomial model for the BAF of the cluster <code class="docutils literal notranslate"><span class="pre">ID</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">BETA</span></code></p></td>
+<td><p>The beta parameter of the binomial model for the BAF of the cluster <code class="docutils literal notranslate"><span class="pre">ID</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">BAF</span></code></p></td>
+<td><p>The BAF of the cluster <code class="docutils literal notranslate"><span class="pre">ID</span></code> in <code class="docutils literal notranslate"><span class="pre">SAMPLE</span></code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="commands">
+<h2>Commands<a class="headerlink" href="#commands" title="Permalink to this headline">¶</a></h2>
+<p>A command must be specified using the flag <code class="docutils literal notranslate"><span class="pre">-c</span></code>, <code class="docutils literal notranslate"><span class="pre">--command</span></code> and every command is described in the following together with an example of the corresponding plot.</p>
+<div class="section" id="rd">
+<h3>RD<a class="headerlink" href="#rd" title="Permalink to this headline">¶</a></h3>
+<p>The command generates a scatter plot describing the RDR of every genomic bin in the different samples. For every genomic bin sorted by chromosome and by genomic positions, a point is plotted with the correspondig value of RDR and colored by a color identifying the corresponding sample.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>python -m hatchet plot-bins A12.bbc -c RD -m Set1 --figsize 9,2.5 --markersize 1 --ymax 8 --ymin 0
+</pre></div>
+</div>
+<p><img alt="" src="_images/example_rd.png" /></p>
+</div>
+<hr class="docutils" />
+<div class="section" id="baf">
+<h3>BAF<a class="headerlink" href="#baf" title="Permalink to this headline">¶</a></h3>
+<p>The command generates a scatter plot describing the BAF of every genomic bin in the different samples. For every genomic bin sorted by chromosome and by genomic positions, a point is plotted with the correspondig value of RDR and colored by a color identifying the corresponding sample.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>python -m hatchet plot-bins A12.bbc -c BAF -m Set1 --figsize 9,2.5 --markersize 1 --ymax 8 --ymin 0
+</pre></div>
+</div>
+<p><img alt="" src="_images/example_baf.png" /></p>
+</div>
+<hr class="docutils" />
+<div class="section" id="bb">
+<h3>BB<a class="headerlink" href="#bb" title="Permalink to this headline">¶</a></h3>
+<p>The command generates a series of 2d-scatter plots where x-axis corresponds to the RDR and the y-axis corresponds to 0.5 - BAF. More specifically, a plot is generated for every sample and every point is drawn according to the corresponding values of RDR and BAF. The points are colored according to their density from blue (low density) to dark red (high density).</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>python -m hatchet plot-bins A12.bbc -c BB --figsize 8,6 --markersize 1 --xmax 3.5 --xmin 0.5
+</pre></div>
+</div>
+<p><img alt="" src="_images/example_bb.png" /></p>
+</div>
+<hr class="docutils" />
+<div class="section" id="cbb">
+<h3>CBB<a class="headerlink" href="#cbb" title="Permalink to this headline">¶</a></h3>
+<p>The command generates a series of 2d-scatter plots where x-axis corresponds to the RDR and the y-axis corresponds to 0.5 - BAF. More specifically, a plot is generated for every sample and every point is drawn according to the corresponding values of RDR and BAF. The points are colored according to the clusters computed by HATCHet. Remember that a cluster contains all the genomic regions that have the same copy-number state in every clone.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>python -m hatchet plot-bins A12.bbc -c CBB --figsize 4,1.1 -m tab20 --markersize 1 --xmax 3.5 --xmin 0.5 --colwrap 3 -tS 0.005
+</pre></div>
+</div>
+<p><img alt="" src="_images/example_cbb.png" /></p>
+</div>
+<hr class="docutils" />
+<div class="section" id="crdr">
+<h3>CRDR<a class="headerlink" href="#crdr" title="Permalink to this headline">¶</a></h3>
+<p>The command generates a series of 2d-scatter plots where x-axis corresponds to the RDR and to bins sorted by chromosome and positions. More specifically, a plot is generated for every sample and every point is drawn according to the corresponding values of RDR. The points are colored according to the clusters computed by HATCHet. Remember that a cluster contains all the genomic regions that have the same copy-number state in every clone.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>python -m hatchet plot-bins A12.bbc -c CRD -m tab20 --figsize 9,2.5 --markersize 1 --ymax 8 --ymin 0
+</pre></div>
+</div>
+<p><img alt="" src="_images/example_crdr.png" /></p>
+</div>
+<hr class="docutils" />
+<div class="section" id="cbaf">
+<h3>CBAF<a class="headerlink" href="#cbaf" title="Permalink to this headline">¶</a></h3>
+<p>The command generates a series of 2d-scatter plots where x-axis corresponds to the BAF and to bins sorted by chromosome and positions. More specifically, a plot is generated for every sample and every point is drawn according to the corresponding values of BAF. The points are colored according to the clusters computed by HATCHet. Remember that a cluster contains all the genomic regions that have the same copy-number state in every clone.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>python -m hatchet plot-bins A12.bbc -c CBAF -m tab20 --figsize 9,2.5 --markersize 1 --ymax 8 --ymin 0
+</pre></div>
+</div>
+<p><img alt="" src="_images/example_cbaf.png" /></p>
+</div>
+<hr class="docutils" />
+<div class="section" id="parameters">
+<h3>Parameters<a class="headerlink" href="#parameters" title="Permalink to this headline">¶</a></h3>
+<table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Usage</p></th>
+<th class="head"><p>Default</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">-tC</span></code>, <code class="docutils literal notranslate"><span class="pre">--chrthreshold</span></code></p></td>
+<td><p>Threshold of chromosomes</p></td>
+<td><p>A threshold can be specified to select to plot only genomic regions belonging to clusters that cover at least the specified number of chomosomes</p></td>
+<td><p>0, no threshold</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">-tS</span></code>, <code class="docutils literal notranslate"><span class="pre">--sizethreshold</span></code></p></td>
+<td><p>Threshold of size</p></td>
+<td><p>A threshold can be specified to select to plot only genomic regions belonging to clusters that cover at least the specified fraction of the genome</p></td>
+<td><p>0, no threshold</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">--xmin</span></code></p></td>
+<td><p>Minimum x-value of plot</p></td>
+<td><p>The value can be specified to fix the minimum value of x-axis of the plot</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">--xmax</span></code></p></td>
+<td><p>Maximum x-value of plot</p></td>
+<td><p>The value can be specified to fix the maximum value of x-axis of the plot</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">--ymin</span></code></p></td>
+<td><p>Minimum y-value of plot</p></td>
+<td><p>The value can be specified to fix the minimum value of y-axis of the plot</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">--ymax</span></code></p></td>
+<td><p>Maximum y-value of plot</p></td>
+<td><p>The value can be specified to fix the maximum value of y-axis of the plot</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">--figsize</span></code></p></td>
+<td><p>Figure size in the format “(X, Y)”</p></td>
+<td><p>The parameter is used to change the figure size. The meaning and scale of X and Y depend on the different plot so one needs to try different values.</p></td>
+<td><p>Automatic values</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">--markersize</span></code></p></td>
+<td><p>Size of the markers</p></td>
+<td><p>The value is used to scale the size of the point markers</p></td>
+<td><p>Automatic value</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">-m</span></code>, <code class="docutils literal notranslate"><span class="pre">--colormap</span></code></p></td>
+<td><p>Name of the colormap to use</p></td>
+<td><p>The following colormaps are available: {Set1, Set2, Paired, Dark2, tab10, and tab20}</p></td>
+<td><p>tab20</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">--resolution</span></code></p></td>
+<td><p>Number of bins to merge</p></td>
+<td><p>This feature allows plot-bins to merge multiple bins into segments whose copy numbers will be chosen by majority. This features allows to change the resolution of the plot.</p></td>
+<td><p>0, bins are not merged</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">--colwrap</span></code></p></td>
+<td><p>Number of plots per each column</p></td>
+<td><p>This value determines the maximum number of plots for multiple samples to print on the same row</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">--fontscale</span></code></p></td>
+<td><p>Scale for font size</p></td>
+<td><p>The value is used to scale the font size</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">-s</span></code>, <code class="docutils literal notranslate"><span class="pre">--segfile</span></code></p></td>
+<td><p>Path to cluter file</p></td>
+<td><p>The cluster file, containing estimated values of RDR and BAF for each cluster in every sample is only required by <code class="docutils literal notranslate"><span class="pre">CLUSTER</span></code> command</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">-x</span></code>, <code class="docutils literal notranslate"><span class="pre">--rundir</span></code></p></td>
+<td><p>Path to running directory</p></td>
+<td><p>The running directory where output the results</p></td>
+<td><p>Current directory</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Princeton University.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

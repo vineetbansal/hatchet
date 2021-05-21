@@ -1,0 +1,571 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>hatchet &mdash; HATCHet 0.3.1 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> HATCHet
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.3.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="README.html">HATCHet</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">Modules</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">HATCHet</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>hatchet</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/doc_compute_cn.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="hatchet">
+<h1>hatchet<a class="headerlink" href="#hatchet" title="Permalink to this headline">¶</a></h1>
+<p>This step computes allele-specific fractional copy numbers, solves a constrained distance-based simultaneous factorization to compute allele and clone-specific copy numbers and clone proportions, and deploys a model-selection criterion select the number of clone by explicitly considering the trade-off between subclonal copy-number aberrations and whole-genome duplication.
+The step offers some parameters to control each of these features.</p>
+<div class="section" id="input">
+<h2>Input<a class="headerlink" href="#input" title="Permalink to this headline">¶</a></h2>
+<p>This step requires in input two tab-separated files that must have the same prefix <code class="docutils literal notranslate"><span class="pre">${PRE}</span></code> and the only difference is the extension:</p>
+<ol class="simple">
+<li><p>The name of the first file must be <code class="docutils literal notranslate"><span class="pre">${PRE}.bbc</span></code> and is a tab-separated file describing the RDR and BAF of clustered genomic bins with the following fields</p></li>
+</ol>
+<table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Field</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">CHR</span></code></p></td>
+<td><p>Name of a chromosome</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">START</span></code></p></td>
+<td><p>Starting genomic position of a genomic bin in <code class="docutils literal notranslate"><span class="pre">CHR</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">END</span></code></p></td>
+<td><p>Ending genomic position of a genomic bin in <code class="docutils literal notranslate"><span class="pre">CHR</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">SAMPLE</span></code></p></td>
+<td><p>Name of a tumor sample</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">RD</span></code></p></td>
+<td><p>RDR of the bin in <code class="docutils literal notranslate"><span class="pre">SAMPLE</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">#SNPS</span></code></p></td>
+<td><p>Number of SNPs present in the bin in <code class="docutils literal notranslate"><span class="pre">SAMPLE</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">COV</span></code></p></td>
+<td><p>Average coverage in the bin in <code class="docutils literal notranslate"><span class="pre">SAMPLE</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">ALPHA</span></code></p></td>
+<td><p>Alpha parameter related to the binomial model of BAF for the bin in <code class="docutils literal notranslate"><span class="pre">SAMPLE</span></code>, typically total number of reads from A allele</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">BETA</span></code></p></td>
+<td><p>Beta parameter related to the binomial model of BAF for the bin in <code class="docutils literal notranslate"><span class="pre">SAMPLE</span></code>, typically total number of reads from B allele</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">BAF</span></code></p></td>
+<td><p>BAF of the bin in <code class="docutils literal notranslate"><span class="pre">SAMPLE</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">CLUSTER</span></code></p></td>
+<td><p>The name of a cluster</p></td>
+</tr>
+</tbody>
+</table>
+<ol class="simple">
+<li><p>The name of the second file must be <code class="docutils literal notranslate"><span class="pre">${PRE}.seg</span></code> and is a tab-separated file describing the RDR and BAF of clusters of genomic regions with the following fields</p></li>
+</ol>
+<table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Field</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">ID</span></code></p></td>
+<td><p>The name of a cluster</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">SAMPLE</span></code></p></td>
+<td><p>The name of a sample</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">#BINS</span></code></p></td>
+<td><p>The number of bins included in <code class="docutils literal notranslate"><span class="pre">ID</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">RD</span></code></p></td>
+<td><p>The RDR of the cluster <code class="docutils literal notranslate"><span class="pre">ID</span></code> in <code class="docutils literal notranslate"><span class="pre">SAMPLE</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">#SNPS</span></code></p></td>
+<td><p>The total number of SNPs in the cluster <code class="docutils literal notranslate"><span class="pre">ID</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">COV</span></code></p></td>
+<td><p>The average coverage in the cluster <code class="docutils literal notranslate"><span class="pre">ID</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">ALPHA</span></code></p></td>
+<td><p>The alpha parameter of the binomial model for the BAF of the cluster <code class="docutils literal notranslate"><span class="pre">ID</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">BETA</span></code></p></td>
+<td><p>The beta parameter of the binomial model for the BAF of the cluster <code class="docutils literal notranslate"><span class="pre">ID</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">BAF</span></code></p></td>
+<td><p>The BAF of the cluster <code class="docutils literal notranslate"><span class="pre">ID</span></code> in <code class="docutils literal notranslate"><span class="pre">SAMPLE</span></code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="output">
+<h2>Output<a class="headerlink" href="#output" title="Permalink to this headline">¶</a></h2>
+<p>This step produces 2 files, a BBC result file and a SEG result file, for every considered number of clones and for both the assumption of the presence and absence of a WGD.
+For every considered number of clones <code class="docutils literal notranslate"><span class="pre">${N}</span></code> and assuming <code class="docutils literal notranslate"><span class="pre">${P}</span></code> is either equal to <code class="docutils literal notranslate"><span class="pre">diploid</span></code> or <code class="docutils literal notranslate"><span class="pre">tetraploid</span></code>, the steps generates a pair of files as follows:</p>
+<ol class="simple">
+<li><p>The first BBC file has the following name <code class="docutils literal notranslate"><span class="pre">results.${P}.n${N}.bbc.ucn.tsv</span></code> and is a copy of the BBC input file with <code class="docutils literal notranslate"><span class="pre">2</span> <span class="pre">(${N}</span> <span class="pre">+</span> <span class="pre">1)</span></code> additional fields according to the following:</p></li>
+</ol>
+<table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Field</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>…</p></td>
+<td><p>…</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">cn_normal</span></code></p></td>
+<td><p>The copy number state of the normal diploid clone equal to <code>1|1</code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">u_normal</span></code></p></td>
+<td><p>The normal admixture of the normal diploid cells in the corresponding sample</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">cn_clone${n}</span></code></p></td>
+<td><p>The copy number state of the <code class="docutils literal notranslate"><span class="pre">${n}</span></code> tumor clone in the format <code>A|B</code> where <code class="docutils literal notranslate"><span class="pre">A</span></code> and <code class="docutils literal notranslate"><span class="pre">B</span></code> are the two allele-specific copy numbers of the corresponding genomic bin</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">u_clone${n}</span></code></p></td>
+<td><p>The clone proportion of the <code class="docutils literal notranslate"><span class="pre">${n}</span></code> tumor clone in the corresponding sample</p></td>
+</tr>
+</tbody>
+</table>
+<ol class="simple">
+<li><p>The second SEG file has the following name <code class="docutils literal notranslate"><span class="pre">results.${P}.n${N}.seg.ucn.tsv</span></code> and is a file of genomic segments with the following fields:</p></li>
+</ol>
+<table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Field</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">CHR</span></code></p></td>
+<td><p>The name of a chromosome</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">START</span></code></p></td>
+<td><p>The genomic position that starts the corresponding genomic segment</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">END</span></code></p></td>
+<td><p>The genomic position that ends the corresponding genomic segment</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">SAMPLE</span></code></p></td>
+<td><p>The name of a sample</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">cn_normal</span></code></p></td>
+<td><p>The copy number state of the normal diploid clone equal to <code>1|1</code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">u_normal</span></code></p></td>
+<td><p>The normal admixture of the normal diploid cells in the corresponding sample</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">cn_clone${n}</span></code></p></td>
+<td><p>The copy number state of the <code class="docutils literal notranslate"><span class="pre">${n}</span></code> tumor clone in the format <code>A|B</code> where <code class="docutils literal notranslate"><span class="pre">A</span></code> and <code class="docutils literal notranslate"><span class="pre">B</span></code> are the two allele-specific copy numbers of the corresponding genomic bin</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">u_clone${n}</span></code></p></td>
+<td><p>The clone proportion of the <code class="docutils literal notranslate"><span class="pre">${n}</span></code> tumor clone in the corresponding sample</p></td>
+</tr>
+</tbody>
+</table>
+<p>In addition, the two files for the best solution assuming both the absence or presence of a WGD are copied in the files <code class="docutils literal notranslate"><span class="pre">chosen.diploid.bbc.ucn</span></code>, <code class="docutils literal notranslate"><span class="pre">chosen.diploid.seg.ucn</span></code> and <code class="docutils literal notranslate"><span class="pre">chosen.tetraploid.bbc.ucn</span></code>, <code class="docutils literal notranslate"><span class="pre">chosen.tetraploid.seg.ucn</span></code>, respectively.
+Last, hatchet copies the best solution according to the prediction of WGD in the two files <code class="docutils literal notranslate"><span class="pre">best.bbc.ucn</span></code> and <code class="docutils literal notranslate"><span class="pre">best.seg.ucn</span></code>.</p>
+</div>
+<div class="section" id="fractional-copy-numbers">
+<h2>Fractional copy numbers<a class="headerlink" href="#fractional-copy-numbers" title="Permalink to this headline">¶</a></h2>
+<p>The first feature of hatchet is the explicit estimation of allele-specific fractional copy numbers.
+hatchet performs this estimation based on rigorous criterion stating that allele-specific fractional copy numbers can be obtained from RDR and BAF of clusters of genomic regions.
+More specifically, the criterion states that:</p>
+<ul class="simple">
+<li><p>when there is no WGD, the identification of the diploid cluster with copy-number state (1, 1) is sufficient</p></li>
+<li><p>when there is a WGD, the identification of the tetraploid cluster with copy-number state (2, 2) and of a second clonal cluster with a copy-number state (A, B) in all tumor clones are sufficient.</p></li>
+</ul>
+<p>As such, hatchet identifies a heuristic to identifies the required clusters and copy-number states.
+This heuristic can be controlled by the following parameters:</p>
+<table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Usage</p></th>
+<th class="head"><p>Default</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">-c</span></code>, <code class="docutils literal notranslate"><span class="pre">--clonal</span></code></p></td>
+<td><p>The required clusters and corresponding copy number states</p></td>
+<td><p>User can directly specifies the required clusters and the corresponding copy number states to compute the allele-specific fractional copy number states. These must be speficied in the format <code class="docutils literal notranslate"><span class="pre">IDX-1:A-1:B-1,</span> <span class="pre">...,</span> <span class="pre">IDX-M:A-M:B-M</span></code> where <code class="docutils literal notranslate"><span class="pre">IDX-S</span></code> is the name of cluster <code class="docutils literal notranslate"><span class="pre">S</span></code> and <code class="docutils literal notranslate"><span class="pre">(A-S,</span> <span class="pre">B-S)</span></code> is the corresponding copy-number state. Moreover, user can specify addittional clusters and copy numbers beyond the required ones. The copy-numbers for these clusters will be fixed during the computation. This can be an usefule feature for especially noisy datasets.</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">-ts</span></code>, <code class="docutils literal notranslate"><span class="pre">--minsize</span></code></p></td>
+<td><p>Threshold for size of clusters</p></td>
+<td><p>The minimum size of the clusters to consider for the heuristic that identifies clonal clusters. The non-selected clusters will not be considered as potential tumor-clonal clusters. The threshold must be expressed as a fraction of the entire genome.</p></td>
+<td><p>0.02, e.g. <code class="docutils literal notranslate"><span class="pre">2%</span></code> of genome</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">-tc</span></code>, <code class="docutils literal notranslate"><span class="pre">--minchrs</span></code></p></td>
+<td><p>Threshold for number of chromosomes</p></td>
+<td><p>The minimum number of chromosomes covered by the clusters to consider for the heuristic that identifies clonal clusters. The non-selected clusters will not be considered as potential tumor-clonal clusters.</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">-td</span></code>, <code class="docutils literal notranslate"><span class="pre">--maxneutralshift</span></code></p></td>
+<td><p>Maximum BAF shift allowed for diploid cluster</p></td>
+<td><p>The maximum expected shift from 0.5 for BAF for a diploid or tetraploid cluster (i.e. with copy-number states (1, 1) or (2, 2)). This threshold is used for two goals to identify the diploid or tetraploid cluster.</p></td>
+<td><p>0.1</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">-tR</span></code>, <code class="docutils literal notranslate"><span class="pre">--toleranceRDR</span></code></p></td>
+<td><p>Maximum RDR tolerance</p></td>
+<td><p>The maximum RDR tolerance used by the heuristic when estimating the position of all clonal clusters</p></td>
+<td><p>0.04</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">-tB</span></code>, <code class="docutils literal notranslate"><span class="pre">--toleranceBAF</span></code></p></td>
+<td><p>Maximum BAF tolerance</p></td>
+<td><p>The maximum BAF tolerance used by the heuristic when estimating the position of all clonal clusters</p></td>
+<td><p>0.03</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">--merge</span></code></p></td>
+<td><p>Activate merging of clusters</p></td>
+<td><p>When activated, the heuristic will merge together clusters that appear to have the same values of RDR and BAF, according to the values below. This procedure can help the heuristic by refining the clustering and merging clusters that are likely to have the same copy-number states and unlikely to be clonal.</p></td>
+<td><p>False, not used</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">-mR</span></code>, <code class="docutils literal notranslate"><span class="pre">--mergeRDR</span></code></p></td>
+<td><p>RDR merging threhsold</p></td>
+<td><p>The maximum difference in RDR considered by the merging procedure</p></td>
+<td><p>0.1</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">-mB</span></code>, <code class="docutils literal notranslate"><span class="pre">--mergeBAF</span></code></p></td>
+<td><p>BAF merging threhsold</p></td>
+<td><p>The maximum difference in BAF considered by the merging procedure</p></td>
+<td><p>0.03</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="simultaneous-factorization">
+<h2>Simultaneous factorization<a class="headerlink" href="#simultaneous-factorization" title="Permalink to this headline">¶</a></h2>
+<p>The second feature corresponds to the simultaneous factorization of allele-specific copt numbers and clone proportions.
+hatchet solves a constrained and distance-based variant of the factorization that can be controlled by the following parameters.</p>
+<table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Usage</p></th>
+<th class="head"><p>Default</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">-n</span></code>, <code class="docutils literal notranslate"><span class="pre">--clones</span></code></p></td>
+<td><p>Interval for number of clones</p></td>
+<td><p>User can specify the minimum and maximum number of clones to consider</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">&quot;2,8&quot;</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">-eD</span></code>, <code class="docutils literal notranslate"><span class="pre">--diploidcmax</span></code></p></td>
+<td><p>Maximum copy number with no WGD</p></td>
+<td><p>The value of maximum copy number that is considered when assuming no WGD. When <code class="docutils literal notranslate"><span class="pre">0</span></code>-value is specified the maximum copy number is directly inferred from the data by rounding the maximum fractional copy number</p></td>
+<td><p>8</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">-eT</span></code>, <code class="docutils literal notranslate"><span class="pre">--tetraploidcmax</span></code></p></td>
+<td><p>Maximum copy number with a WGD</p></td>
+<td><p>The value of maximum copy number that is considered when assuming there is a WGD. When <code class="docutils literal notranslate"><span class="pre">0</span></code>-value is specified the maximum copy number is directly inferred from the data by rounding the maximum fractional copy number</p></td>
+<td><p>8</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">-u</span></code>, <code class="docutils literal notranslate"><span class="pre">--minprop</span></code></p></td>
+<td><p>Minimum clone proportion</p></td>
+<td><p>In every sample, each clone either is non present (clone proportion equal to 0.0) or has a clone proportion higher than this threshold</p></td>
+<td><p>0.03</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">-f</span></code>, <code class="docutils literal notranslate"><span class="pre">--noampdel</span></code></p></td>
+<td><p>Activate clone evolutionary contraints</p></td>
+<td><p>User can decide whether to enable or not constrained about the evolution of tumor clones. These constrained force each allele to be either amplified or deleted across all tumor clones</p></td>
+<td><p>Activated</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">-d</span></code>, <code class="docutils literal notranslate"><span class="pre">--cnstates</span></code></p></td>
+<td><p>Maximum number of distinct copy-number states per cluster</p></td>
+<td><p>When enabled, the maximum number of distinct copy-number states per cluster is fixed. This option is deprecated</p></td>
+<td><p>Not used</p></td>
+</tr>
+</tbody>
+</table>
+<p>HATCHet implements two methods to solve the constrained and distance-based simultaneous factorization: (1) a integer-linear programming (ILP) and (2) a coordinate-descent method (CD).
+These methods can be combined in 3 different modes:</p>
+<ul class="simple">
+<li><p>(0) CD + ILP: the solution found by CD is used to start the ILP. As such, ILP attempts to improve the solution found by CD.</p></li>
+<li><p>(1) ILP only</p></li>
+<li><p>(2) CD only</p></li>
+</ul>
+<p>The mode can be specified through the flag <code class="docutils literal notranslate"><span class="pre">--mode</span></code> whose default is mode 2.
+In addition, the solving methods can be controlled by the following parameters.</p>
+<table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Usage</p></th>
+<th class="head"><p>Default</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">-j</span></code>, <code class="docutils literal notranslate"><span class="pre">--jobs</span></code></p></td>
+<td><p>Number of parallel jobs</p></td>
+<td><p>Every job will run on parallel a different seed of the CD algorithm and all the jobs can be used for solving the ILP</p></td>
+<td><p>Number of available processes on machine</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">-p</span></code>, <code class="docutils literal notranslate"><span class="pre">--seeds</span></code></p></td>
+<td><p>Number of CD seeds</p></td>
+<td><p>Number of random restarts executed by the CD algorithm. In general, the higher the number of restarts, the better the result</p></td>
+<td><p>400</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">-r</span></code>, <code class="docutils literal notranslate"><span class="pre">--randomseed</span></code></p></td>
+<td><p>Seed for random generator</p></td>
+<td><p>Every execution started from the same seed have a deterministic behaviour and can be exactly replicated</p></td>
+<td><p>None, random seed</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">-s</span></code>, <code class="docutils literal notranslate"><span class="pre">--timelimit</span></code></p></td>
+<td><p>Time limit</p></td>
+<td><p>The time limit, expressed in seconds, is imposed to every step of the CD algorithm or to the whole ILP</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">-m</span></code>, <code class="docutils literal notranslate"><span class="pre">--timelimit</span></code></p></td>
+<td><p>Memory limit</p></td>
+<td><p>The memory limit, expressed in megabytes, is imposed to every step of the CD algorithm or to the whole ILP. The execution will not be interrupted when reaching the threshold but disk is used</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">--maxiterations</span></code></p></td>
+<td><p>Maximum number of iteration per seed</p></td>
+<td><p>This number is imposed as the maximum number of iterations executed for every restart of the CD algorithm</p></td>
+<td><p>40</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">--diploid</span></code></p></td>
+<td><p>Assume no WGD</p></td>
+<td><p>When enabled, HATCHet assumes the absence of a WGD</p></td>
+<td><p>Not used</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">--tetraloid</span></code></p></td>
+<td><p>Assume a WGD</p></td>
+<td><p>When enabled, HATCHet assumes the occurrence of a WGD</p></td>
+<td><p>Not used</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="model-selection">
+<h2>Model selection<a class="headerlink" href="#model-selection" title="Permalink to this headline">¶</a></h2>
+<p>This steps have two main parameters to control the model-selection criterion:</p>
+<table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Usage</p></th>
+<th class="head"><p>Default</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">-l</span></code>, <code class="docutils literal notranslate"><span class="pre">--limitinc</span></code></p></td>
+<td><p>Sensitivity level</p></td>
+<td><p>The sensitivity level is used to control the confidence in evaluating the presence of tumor clones characterized by small CNAs. By decreasing the value of the sensitivity, HATCHet is more sensible to the presence of small CNAs and small clusters or with small shifts in RDR/BAF are more likely considered as the signal of an additional tumor clone. The possible values of this parameter are between 1.0 and 0.0 and specifically corresponds to an upper bound for the left relative improvement of the objective function.</p></td>
+<td><p>None, reasonable values to use can be 0.6, 0.5, 0.4, 0.3, 0.2, … according to the values of the objective function.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">-g</span></code>, <code class="docutils literal notranslate"><span class="pre">--ghostprop</span></code></p></td>
+<td><p>Confidence in the presence of a single tumor clone</p></td>
+<td><p>This value expresses the confidence of HATCHet when evaluating the presence of a single tumor clone. The higher the value the more likely the presence of a single clone is considered</p></td>
+<td><p>0.2</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="additional-parameters">
+<h2>Additional parameters<a class="headerlink" href="#additional-parameters" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Princeton University.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
